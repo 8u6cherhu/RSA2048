@@ -7,7 +7,7 @@
 
 module mm_r2mm_2n
 #(
-    parameter K = 256 //K%2==0 AND K<8191
+    parameter K = 2048 //K%2==0 AND K<8191
 )
 (
     input   wire            clk     ,

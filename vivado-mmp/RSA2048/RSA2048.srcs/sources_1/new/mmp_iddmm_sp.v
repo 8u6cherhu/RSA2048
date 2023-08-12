@@ -24,9 +24,11 @@ module mmp_iddmm_sp#(
                                          // "3-2_DELAY2":use + ,adder2 has 1  delay,32*(32+2)*2=2176 clock
                                          // 
     parameter MULT_LATENCY = 0       ,                            
-    parameter ADD1_LATENCY = 0        
-)
-(
+    parameter ADD1_LATENCY = 0       ,
+
+    parameter K = 128,                  // K bits in every group
+    parameter N = 32                    // Number of groups
+)(
     input       wire                    clk         ,
     input       wire                    rst_n       ,
     
@@ -86,12 +88,14 @@ wire            wr_n;
 always@(posedge clk)begin if (wr_ena) begin m1<=wr_m1; end else begin m1<=m1;end end
 //----------------------------------------------------------------------------------------------------------
 mmp_iddmm_ctrl #(
-    .L1 ( L1 ),
-    .L2 ( L2 ),
-    .L3 ( L3 ),
-    .L4 ( L4 ),
-    .D5 ( D5 ))
-mmp_iddmm_ctrl_0 (
+        .L1 ( L1 )
+    ,   .L2 ( L2 )
+    ,   .L3 ( L3 )
+    ,   .L4 ( L4 )
+    ,   .D5 ( D5 )
+    ,   .K  ( K  )
+    ,   .N  ( N  )
+)mmp_iddmm_ctrl_0 (
     .clk                     ( clk              ),
     .rst_n                   ( rst_n            ),
     .task_req                ( task_req         ),
@@ -117,14 +121,16 @@ mmp_iddmm_ctrl_0 (
     .ref_wr_a_ena            ( wr_a_ena         )
 );
 mmp_iddmm_pe #(
-    .L1 ( L1 ),
-    .L2 ( L2 ),
-    .L3 ( L3 ),
-    .L4 ( L4 ),
-    .D5 ( D5 ),
-    .MULT_METHOD(MULT_METHOD),
-    .ADD1_METHOD(ADD1_METHOD),
-    .ADD2_METHOD(ADD2_METHOD)
+        .L1             ( L1 )
+    ,   .L2             ( L2 )
+    ,   .L3             ( L3 )
+    ,   .L4             ( L4 )
+    ,   .D5             ( D5 )
+    ,   .MULT_METHOD    (MULT_METHOD)
+    ,   .ADD1_METHOD    (ADD1_METHOD)
+    ,   .ADD2_METHOD    (ADD2_METHOD)
+    ,   .K              ( K )
+    ,   .N              ( N )
 )mmp_iddmm_pe_0 (
     .clk                     ( clk                ),
     .rst_n                   ( rst_n              ),
@@ -144,9 +150,9 @@ mmp_iddmm_pe #(
     .uj                      ( uj     [128-1  :0] )
 );
 mm_iddmm_sub #(
-    .K ( 128 ),
-    .N ( 32 ))
-mm_iddmm_sub_0 (
+    .K ( K ),
+    .N ( N )
+)mm_iddmm_sub_0 (
     .clk                     ( clk                       ),
     .rst_n                   ( rst_n                     ),
     // SUB

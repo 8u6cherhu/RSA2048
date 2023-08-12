@@ -9,13 +9,15 @@
 */
 module mmp_iddmm_ctrl
 #(
-    parameter L1 = 0     ,// First mul128 latency
-    parameter L2 = 0     ,// First add latency
-    parameter L3 = 0     ,// m1*s latency
-    parameter L4 = 0     ,// mj*q latency
-    parameter D5 = 0      // 0:使用0延迟组合逻辑实现最后一级加法器。1:最后一级加法器两个周期出结果
-)
-(
+        parameter L1 = 0    // First mul128 latency
+    ,   parameter L2 = 0    // First add latency
+    ,   parameter L3 = 0    // m1*s latency
+    ,   parameter L4 = 0    // mj*q latency
+    ,   parameter D5 = 0    // 0:使用0延迟组合逻辑实现最后一级加法器。1:最后一级加法器两个周期出结果
+    ,   parameter N  = 32   
+    ,   parameter K  = 128   
+    ,   parameter ADDR_W = $clog2(N)
+)(
     input   wire                    clk           ,
     input   wire                    rst_n         ,
 
@@ -41,8 +43,10 @@ module mmp_iddmm_ctrl
     output  reg                     ref_wr_n      , 
     output  wire  [5-1:0]           ref_wr_a_addr ,
     output  wire                    ref_wr_a_ena  
-
 );
+
+
+
 generate
     if (D5==0) begin:d5_eq_0
         //----------------------------------------------------------------------------------------------------------
@@ -103,7 +107,7 @@ generate
                 i   <= _i;
                 j   <= _j;
                 j00 <= _j00;
-                ref_wr_n        <= (_j==6'd32);     // +20200723
+                ref_wr_n        <= (_j==N);     // +20200723
                 ctl_carry_clr   <= (_j==0 && _i==0);// +20200723
                 ctl_c_pre_clr   <= (_j==0 && _j00); // +20200723
             end
@@ -127,11 +131,11 @@ generate
                         st   <= st  +   1'd1;
                     end 
                     2:begin
-                        if (_i==5'd31 && _j==6'd32) begin
+                        if (_i==(N-1) && _j==N) begin
                             _j   <=  'd0;
                             _i   <=  'd0;
                             st   <= st  +   1'd1;
-                        end else if (_j==6'd32) begin
+                        end else if (_j==N) begin
                             _j   <=  'd0;
                             _i   <= _i + 1'd1;
                             _j00 <= 1'd1;
@@ -239,10 +243,10 @@ generate
                 j   <= _j;
                 j00 <= _j00;
                 jref<= _jref;
-                ref_wr_n        <= (_j==6'd32);     
+                ref_wr_n        <= (_j==N);     
                 ctl_carry_clr   <= (_j==0 && _i==0);
-                ctl_carry_ena_r <= (_j==6'd32 && _jref);
-                ctl_carry_sel_r <= (_j==6'd32);
+                ctl_carry_ena_r <= (_j==N && _jref);
+                ctl_carry_sel_r <= (_j==N);
                 ctl_c_pre_clr   <= (_j==0 && _j00); 
             end
         end
@@ -275,11 +279,11 @@ generate
                     end 
                     2:begin
                         if (_jref) begin
-                            if (_i==5'd31 && _j==6'd32) begin
+                            if (_i==(N-1) && _j==N) begin
                                 _j   <=  'd0;
                                 _i   <=  'd0;
                                 st   <= st  +   1'd1;
-                            end else if (_j==6'd32) begin
+                            end else if (_j==N) begin
                                 _j   <=  'd0;
                                 _i   <= _i + 1'd1;
                                 _j00 <= 1'd1;

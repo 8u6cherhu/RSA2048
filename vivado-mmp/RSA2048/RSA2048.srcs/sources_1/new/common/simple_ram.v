@@ -51,11 +51,16 @@ localparam f=(deep==0)?(2**widthad):deep;
 
 
 initial begin
-$readmemh(filename,mem);
+    $readmemh(filename,mem);
 end
 
 always @(posedge clk) begin
-    if(wren) mem[wraddress] <= data;
+    if(wren) begin
+        mem[wraddress] <= data;
+    end
+end
+
+always @(posedge clk) begin
     q <= mem[rdaddress];
 end
 

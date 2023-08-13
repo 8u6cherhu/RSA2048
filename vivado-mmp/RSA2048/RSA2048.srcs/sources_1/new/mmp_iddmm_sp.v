@@ -13,58 +13,59 @@
 */
 // `define _VIEW_UJ_;
 module mmp_iddmm_sp#(
-    parameter MULT_METHOD  = "COMMON",   // "COMMON"    :use * ,MULT_LATENCY arbitrarily
-                                         // "TRADITION" :MULT_LATENCY=9                
-                                         // "VEDIC8-8"  :VEDIC MULT, MULT_LATENCY=8 
-    parameter ADD1_METHOD  = "COMMON",   // "COMMON"    :use + ,ADD1_LATENCY arbitrarily
-                                         // "3-2_PIPE2" :classic pipeline adder,stage 2,ADD1_LATENCY=2
-                                         // "3-2_PIPE1" :classic pipeline adder,stage 1,ADD1_LATENCY=1
-                                         // 
-    parameter ADD2_METHOD  = "COMMON",   // "COMMON"    :use + ,adder2 has no delay,32*(32+2)=1088 clock
-                                         // "3-2_DELAY2":use + ,adder2 has 1  delay,32*(32+2)*2=2176 clock
-                                         // 
-    parameter MULT_LATENCY = 0       ,                            
-    parameter ADD1_LATENCY = 0       ,
+        parameter MULT_METHOD  = "COMMON"   // "COMMON"    :use * ,MULT_LATENCY arbitrarily
+                                            // "TRADITION" :MULT_LATENCY=9                
+                                            // "VEDIC8-8"  :VEDIC MULT, MULT_LATENCY=8 
+    ,   parameter ADD1_METHOD  = "COMMON"   // "COMMON"    :use + ,ADD1_LATENCY arbitrarily
+                                            // "3-2_PIPE2" :classic pipeline adder,stage 2,ADD1_LATENCY=2
+                                            // "3-2_PIPE1" :classic pipeline adder,stage 1,ADD1_LATENCY=1
+                                            // 
+    ,   parameter ADD2_METHOD  = "COMMON"   // "COMMON"    :use + ,adder2 has no delay,32*(32+2)=1088 clock
+                                            // "3-2_DELAY2":use + ,adder2 has 1  delay,32*(32+2)*2=2176 clock
+                                            // 
+    ,   parameter MULT_LATENCY = 0                                   
+    ,   parameter ADD1_LATENCY = 0       
 
-    parameter K = 128,                  // K bits in every group
-    parameter N = 32                    // Number of groups
+    ,   parameter K = 128                   // K bits in every group
+    ,   parameter N = 32                    // Number of groups
+    ,   parameter ADDR_W = $clog2(N)
 )(
     input       wire                    clk         ,
     input       wire                    rst_n       ,
     
     input       wire                    wr_ena      ,
-    input       wire [5  -1:0]          wr_addr     ,
-    input       wire [128-1:0]          wr_x        ,//low words first
-    input       wire [128-1:0]          wr_y        ,//low words first
-    input       wire [128-1:0]          wr_m        ,//low words first
-    input       wire [128-1:0]          wr_m1       ,
+    input       wire [ADDR_W-1:0]       wr_addr     ,
+    input       wire [K-1:0]            wr_x        ,//low words first
+    input       wire [K-1:0]            wr_y        ,//low words first
+    input       wire [K-1:0]            wr_m        ,//low words first
+    input       wire [K-1:0]            wr_m1       ,
 
     input       wire                    task_req    ,
     output      wire                    task_end    ,
     output      wire                    task_grant  ,
-    output      wire [128-1:0]          task_res         
+    output      wire [K-1:0]            task_res         
 );
 localparam L1      = MULT_LATENCY;// xj*yi latency
 localparam L2      = ADD1_LATENCY;// First adder latency
 localparam L3      = MULT_LATENCY;// m1*s  latency
 localparam L4      = MULT_LATENCY;// mj*q  latency
 localparam D5      = (ADD2_METHOD=="3-2_DELAY2")?1:0;//End adder method
-wire ctl_carry_clr;
-wire ctl_carry_ena;
-wire ctl_carry_sel;
-wire ctl_c_pre_clr;
-wire ctl_c_pre_ena;
-wire ctl_q_ena    ;
-wire carry        ;
-wire [128-1:0]xj  ;
-wire [128-1:0]yi  ;
-wire [128-1:0]mj  ;
-reg  [128-1:0]m1  ;
-wire [128-1:0]aj  ;
-wire [128-1:0]uj  ;
-wire comp_req     ;
-wire comp_end     ;
-wire [128-1:0]comp_res ;
+wire ctl_carry_clr  ;
+wire ctl_carry_ena  ;
+wire ctl_carry_sel  ;
+wire ctl_c_pre_clr  ;
+wire ctl_c_pre_ena  ;
+wire ctl_q_ena      ;
+wire carry          ;
+wire [K-1:0]xj      ;
+wire [K-1:0]yi      ;
+wire [K-1:0]mj      ;
+reg  [K-1:0]m1      ;
+wire [K-1:0]aj      ;
+wire [K-1:0]uj      ;
+wire comp_req       ;
+wire comp_end       ;
+wire [K-1:0]comp_res ;
 wire comp_val     ;
 
 assign task_end   = comp_end;
@@ -121,33 +122,33 @@ mmp_iddmm_ctrl #(
     .ref_wr_a_ena            ( wr_a_ena         )
 );
 mmp_iddmm_pe #(
-        .L1             ( L1 )
-    ,   .L2             ( L2 )
-    ,   .L3             ( L3 )
-    ,   .L4             ( L4 )
-    ,   .D5             ( D5 )
-    ,   .MULT_METHOD    (MULT_METHOD)
-    ,   .ADD1_METHOD    (ADD1_METHOD)
-    ,   .ADD2_METHOD    (ADD2_METHOD)
-    ,   .K              ( K )
-    ,   .N              ( N )
+        .L1                  ( L1 )
+    ,   .L2                  ( L2 )
+    ,   .L3                  ( L3 )
+    ,   .L4                  ( L4 )
+    ,   .D5                  ( D5 )
+    ,   .MULT_METHOD         (MULT_METHOD)
+    ,   .ADD1_METHOD         (ADD1_METHOD)
+    ,   .ADD2_METHOD         (ADD2_METHOD)
+    ,   .K                   ( K )
+    ,   .N                   ( N )
 )mmp_iddmm_pe_0 (
-    .clk                     ( clk                ),
-    .rst_n                   ( rst_n              ),
+    .clk                     ( clk                  ),
+    .rst_n                   ( rst_n                ),
     // PE
-    .xj                      ( xj                 ),
-    .yi                      ( yi     [128-1  :0] ),
-    .mj                      ( (wr_n)?(128'd0):mj ),// caution
-    .m1                      ( m1     [128-1  :0] ),
-    .aj                      ( (wr_n)?(128'd0):aj ),// caution
-    .ctl_carry_clr           ( ctl_carry_clr      ),// (j==0 && i==0);
-    .ctl_carry_ena           ( ctl_carry_ena      ),// (j==N);        
-    .ctl_carry_sel           ( ctl_carry_sel      ),        
-    .ctl_c_pre_clr           ( ctl_c_pre_clr      ),// (j==0 && j00); 
-    .ctl_c_pre_ena           ( ctl_c_pre_ena      ),// (jref);will be used if D5==1
-    .ctl_q_ena               ( ctl_q_ena          ),// (j==0 && j00); 
-    .carry                   ( carry              ),
-    .uj                      ( uj     [128-1  :0] )
+    .xj                      ( xj                   ),
+    .yi                      ( yi     [K-1  :0]     ),
+    .mj                      ( (wr_n)?  0   :mj     ),// caution
+    .m1                      ( m1     [K-1  :0]     ),
+    .aj                      ( (wr_n)?  0   :aj     ),// caution
+    .ctl_carry_clr           ( ctl_carry_clr        ),// (j==0 && i==0);
+    .ctl_carry_ena           ( ctl_carry_ena        ),// (j==N);        
+    .ctl_carry_sel           ( ctl_carry_sel        ),        
+    .ctl_c_pre_clr           ( ctl_c_pre_clr        ),// (j==0 && j00); 
+    .ctl_c_pre_ena           ( ctl_c_pre_ena        ),// (jref);will be used if D5==1
+    .ctl_q_ena               ( ctl_q_ena            ),// (j==0 && j00); 
+    .carry                   ( carry                ),
+    .uj                      ( uj     [K-1  :0]     )
 );
 mm_iddmm_sub #(
     .K ( K ),
@@ -164,17 +165,16 @@ mm_iddmm_sub #(
     .clra_mem                ( clra_mem                  ),
     .clra_wren               ( clra_wren                 ),
     .clra_addr               ( clra_addr                 ),
-    .aj                      ( aj        [128-1      :0] ),
+    .aj                      ( aj        [K-1       :0]  ),
     .an                      ( {{127{1'd0}},an}          ),
-    .mj                      ( mj        [128-1      :0] ),
-    .addr_a                  ( addr_compa[5-1        :0] ),
-    .addr_m                  ( addr_compm[5-1        :0] )
+    .mj                      ( mj        [K-1       :0]  ),
+    .addr_a                  ( addr_compa[5-1       :0]  ),
+    .addr_m                  ( addr_compm[5-1       :0]  )
 );
 //----------------------------------------------------------------------------------------------------------
 simple_ram#(
-    .width                   ( 128              ),
-    .widthad                 ( 6                ),//0-63,0-32 will be used
-    .deep                    ( 33               ),
+    .width                   ( K                ),
+    .widthad                 ( ADDR_W+1         ),//0-63,0-32 will be used
     .filename                ( "x.mem"))//caution:>>>>> addr32 must be 0 <<<<<
 simple_ram_x(
     .clk                     ( clk              ),
@@ -185,8 +185,8 @@ simple_ram_x(
     .q                       ( xj               )
 );
 simple_ram#(
-    .width                   ( 128              ),
-    .widthad                 ( 5                ),
+    .width                   ( K                ),
+    .widthad                 ( ADDR_W           ),
     .filename                ( "y.mem"))
 simple_ram_y(
     .clk                     ( clk              ),
@@ -197,8 +197,8 @@ simple_ram_y(
     .q                       ( yi               )
 );
 simple_ram#(
-    .width                   ( 128              ),
-    .widthad                 ( 5                ),
+    .width                   ( K                ),
+    .widthad                 ( ADDR_W           ),
     .filename                ( "m.mem"))
 simple_ram_m(
     .clk                     ( clk              ),
@@ -209,14 +209,14 @@ simple_ram_m(
     .q                       ( mj               )
 );
 simple_ram#(
-    .width                   ( 128              ),
-    .widthad                 ( 5                ),
+    .width                   ( K                ),
+    .widthad                 ( ADDR_W           ),
     .filename                ("a0.mem"))
 simple_ram_a(//a(0)~a(n-1)
     .clk                     ( clk                                ),
     .wraddress               ( (clra_mem)?clra_addr   :wr_a_addr  ),
     .wren                    ( (clra_mem)?clra_wren   :wr_a_ena   ),
-    .data                    ( (clra_mem)?{128{1'd0}} :uj         ),
+    .data                    ( (clra_mem)?{K{1'd0}}   :uj         ),
     .rdaddress               ( (comp_req)?addr_compa  :addr_rda   ),
     .q                       ( aj                                 )
 );

@@ -33,7 +33,7 @@ module mmp_iddmm_sp#(
     input       wire                    clk         ,
     input       wire                    rst_n       ,
     
-    input       wire                    wr_ena      ,
+    input       wire [1  :0]            wr_ena      ,
     input       wire [ADDR_W-1:0]       wr_addr     ,
     input       wire [K-1:0]            wr_x        ,//low words first
     input       wire [K-1:0]            wr_y        ,//low words first
@@ -179,7 +179,7 @@ simple_ram#(
 simple_ram_x(
     .clk                     ( clk              ),
     .wraddress               ( {1'd0,wr_addr}   ),//0-31
-    .wren                    ( wr_ena           ),
+    .wren                    ( wr_ena[0]        ),
     .data                    ( wr_x             ),
     .rdaddress               ( addr_rdx         ),//0-32 will be read out
     .q                       ( xj               )
@@ -191,7 +191,7 @@ simple_ram#(
 simple_ram_y(
     .clk                     ( clk              ),
     .wraddress               ( wr_addr          ),
-    .wren                    ( wr_ena           ),
+    .wren                    ( wr_ena[1]        ),
     .data                    ( wr_y             ),
     .rdaddress               ( addr_rdy         ),
     .q                       ( yi               )
@@ -203,7 +203,7 @@ simple_ram#(
 simple_ram_m(
     .clk                     ( clk              ),
     .wraddress               ( wr_addr          ),
-    .wren                    ( wr_ena           ),
+    .wren                    ( wr_ena&0         ),
     .data                    ( wr_m             ),
     .rdaddress               ( (comp_req)?addr_compm:addr_rdm),
     .q                       ( mj               )

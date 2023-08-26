@@ -44,7 +44,7 @@
 
 具体实现框架如下图右边所示：
 
-![me](pic/me.png)
+![me](Pic/me.png)
 
 
 

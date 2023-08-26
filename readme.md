@@ -1,9 +1,5 @@
 
 
-![语言](https://img.shields.io/badge/语言-verilog & system verilog-9A90FD.svg)![部署](https://img.shields.io/badge/部署-vivado-FF1010.svg) ![仿真](https://img.shields.io/badge/仿真-vivado-green.svg) 
-
-
-
 # AHB接口的RSA2048模块
 
 这是2023年第七届全国大学生集成电路创新创业大赛（“集创赛”）平头哥杯二等奖作品中的使用的RSA解密模块的源代码，其用于挂在AHB总线上用于数字签名的验证。

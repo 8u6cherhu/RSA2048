@@ -33,7 +33,7 @@ module mmp_iddmm_sp#(
     input       wire                    clk         ,
     input       wire                    rst_n       ,
     
-    input       wire [1  :0]            wr_ena      ,
+    input       wire [2  :0]            wr_ena      ,
     input       wire [ADDR_W-1:0]       wr_addr     ,
     input       wire [K-1:0]            wr_x        ,//low words first
     input       wire [K-1:0]            wr_y        ,//low words first
@@ -86,7 +86,14 @@ wire            wr_a_ena;
 
 wire            wr_n;
 //----------------------------------------------------------------------------------------------------------
-always@(posedge clk)begin if (wr_ena) begin m1<=wr_m1; end else begin m1<=m1;end end
+always@(posedge clk)begin 
+    if (wr_ena) begin 
+        m1<=wr_m1; 
+    end 
+    else begin 
+        m1<=m1;
+    end 
+end
 //----------------------------------------------------------------------------------------------------------
 mmp_iddmm_ctrl #(
         .L1 ( L1 )
@@ -175,8 +182,8 @@ mm_iddmm_sub #(
 simple_ram#(
     .width                   ( K                ),
     .widthad                 ( ADDR_W+1         ),//0-63,0-32 will be used
-    .filename                ( "x.mem"))//caution:>>>>> addr32 must be 0 <<<<<
-simple_ram_x(
+    .filename                ( "x.mem")
+)simple_ram_x(//caution:>>>>> addr32 must be 0 <<<<<
     .clk                     ( clk              ),
     .wraddress               ( {1'd0,wr_addr}   ),//0-31
     .wren                    ( wr_ena[0]        ),
@@ -187,8 +194,8 @@ simple_ram_x(
 simple_ram#(
     .width                   ( K                ),
     .widthad                 ( ADDR_W           ),
-    .filename                ( "y.mem"))
-simple_ram_y(
+    .filename                ( "y.mem")
+)simple_ram_y(
     .clk                     ( clk              ),
     .wraddress               ( wr_addr          ),
     .wren                    ( wr_ena[1]        ),
@@ -199,11 +206,11 @@ simple_ram_y(
 simple_ram#(
     .width                   ( K                ),
     .widthad                 ( ADDR_W           ),
-    .filename                ( "m.mem"))
-simple_ram_m(
+    .filename                ( "m.mem")
+)simple_ram_m(
     .clk                     ( clk              ),
     .wraddress               ( wr_addr          ),
-    .wren                    ( wr_ena&0         ),
+    .wren                    ( wr_ena[2]        ),
     .data                    ( wr_m             ),
     .rdaddress               ( (comp_req)?addr_compm:addr_rdm),
     .q                       ( mj               )
@@ -211,8 +218,8 @@ simple_ram_m(
 simple_ram#(
     .width                   ( K                ),
     .widthad                 ( ADDR_W           ),
-    .filename                ("a0.mem"))
-simple_ram_a(//a(0)~a(n-1)
+    .filename                ("a0.mem")
+)simple_ram_a(//a(0)~a(n-1)
     .clk                     ( clk                                ),
     .wraddress               ( (clra_mem)?clra_addr   :wr_a_addr  ),
     .wren                    ( (clra_mem)?clra_wren   :wr_a_ena   ),

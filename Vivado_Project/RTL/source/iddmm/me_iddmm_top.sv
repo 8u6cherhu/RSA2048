@@ -37,17 +37,36 @@ module me_iddmm_top#(
     ,   output      [K-1:0]     me_result   
     ,   output                  me_valid
 );
-localparam data_test    =   1;
 
-wire    [K*N-1  : 0]    me_y                    ;
-wire    [K-1    : 0]    me_m1                   ;
-reg     [K-1    : 0]    rou [N-1:0]             ;
-reg     [K-1    : 0]    result [N-1:0]          ;
-reg     [K-1    : 0]    result_backup [N-1:0]   ;
+wire    [K*N-1  : 0]    me_y                        ;
+wire    [K-1    : 0]    me_m            [N-1:0]     ;
+wire    [K-1    : 0]    me_m1                       ;
+reg     [K-1    : 0]    rou             [N-1:0]     ;
+reg     [K-1    : 0]    result          [N-1:0]     ;
+reg     [K-1    : 0]    result_backup   [N-1:0]     ;
 
 
-assign   me_y       =   2048'h010001;
-assign   me_m1      =   128'ha83c91fe83adee77f2b721fabf7087cf;//m1=(-1*(mod_inv(m,2**K)))%2**K
+assign  me_y        =   2048'h010001;
+assign  me_m1       =   128'ha83c91fe83adee77f2b721fabf7087cf;//m1=(-1*(mod_inv(m,2**K)))%2**K
+
+assign  me_m        =   '{
+    128'hdc1b56f36e933ec234545c4715370b14,
+    128'hcae00ea9376e9f65de2c1361f116f05a,
+    128'h4c2ff556ff0052f8e2d3434ff5e843a6,
+    128'hb246449de6c8f04c7ca821effbaa1dbc,
+    128'hc7a1b903a05b7671bb6d0fd8639d492c,
+    128'h5b74c2c91510e3b006b227cbf14a694c,
+    128'h21a98a4b1a2474613ecd29405863716c,
+    128'hf3df5d3160ed0b992a25b35626e67ff1,
+    128'haa9242ed3a1f7ead7c638b26dbe3624b,
+    128'h6712055e101c07761fa6efe38d915006,
+    128'hf52bb4d76e52f13ead7d04b046fb4acf,
+    128'hc02a57e02cf28cc1afc3d22b572669a9,
+    128'h9ee7d357b840bc8bfa4eb1bbad287824,
+    128'hd93ac259d59ebbaa798ed0f026e5a0e0,
+    128'h5392683a68b16964160df9366af79b0a,
+    128'ha8d95fa996e636022e584863a3f4e0d1
+    };
 
 initial begin
     rou = '{
@@ -130,12 +149,14 @@ reg                             result_valid            ;
 reg     [K-1            : 0]    result_out              ; 
 reg     [ADDR_W         : 0]    wr_x_cnt                ;
 
-wire    [1              : 0]    wr_ena                  ;
+wire    [2              : 0]    wr_ena                  ;
 reg                             wr_ena_x                ;
 reg                             wr_ena_y                ;
+reg                             wr_ena_m                ;
 reg     [ADDR_W-1       : 0]    wr_addr                 ;
 reg     [K-1            : 0]    wr_x                    ;
 reg     [K-1            : 0]    wr_y                    ;
+reg     [K-1            : 0]    wr_m                    ;
 
 reg                             task_req                ;
 
@@ -176,6 +197,7 @@ always@(posedge clk or negedge rst_n)begin
         wr_addr         <=  0;
         wr_ena_x        <=  0;
         wr_ena_y        <=  0;
+        wr_ena_m        <=  0;
         yy              <=  me_y;
         loop_counter    <=  0;
         result_valid    <=  0;
@@ -192,8 +214,9 @@ always@(posedge clk or negedge rst_n)begin
                 loop_counter      <=  0;
                 result_valid      <=  0;
                 result_out        <=  0;
-                wr_x              <=  0;  
+                wr_x              <=  0;
                 wr_y              <=  0;
+                wr_m              <=  0;
                 wr_addr           <=  0;
                 wr_x_cnt          <=  0;
                 if(me_start)begin
@@ -203,22 +226,25 @@ always@(posedge clk or negedge rst_n)begin
             //write xx & rou
             state_0_0:begin
                 if(me_x_valid)begin
-                    wr_x_cnt          <=  wr_x_cnt + 1;
-                    wr_addr           <=  wr_addr + 1;
-                    wr_ena_x          <=  1;
-                    wr_x              <=  me_x;
-                    wr_ena_y          <=  1;
-                    wr_y              <=  rou[wr_addr];
+                    wr_x_cnt            <=  wr_x_cnt + 1;
+                    wr_addr             <=  wr_addr + 1;
+                    wr_ena_x            <=  1;
+                    wr_x                <=  me_x;
+                    wr_ena_y            <=  1;
+                    wr_y                <=  rou[wr_addr];
+                    wr_ena_m            <=  1;
+                    wr_m                <=  me_m[wr_addr];
                 end 
                 else begin
-                    wr_ena_x          <=  0;
-                    wr_ena_y          <=  0;
+                    wr_ena_x            <=  0;
+                    wr_ena_y            <=  0;
+                    wr_ena_m            <=  0;
                 end
                 if(wr_x_cnt == N)begin
-                    wr_x_cnt          <=  0;
-                    task_req          <=  1;
-                    wr_addr           <=  0;
-                    current_state     <=  state_0_1;
+                    wr_x_cnt            <=  0;
+                    task_req            <=  1;
+                    wr_addr             <=  0;
+                    current_state       <=  state_0_1;
                 end
             end
             //store result2
@@ -359,7 +385,7 @@ mmp_iddmm_sp #(
     ,   .wr_addr        (wr_addr_d1     )
     ,   .wr_x           (wr_x           )   //low words first
     ,   .wr_y           (wr_y           )   //low words first
-    ,   .wr_m           (0              )   //low words first
+    ,   .wr_m           (wr_m           )   //low words first
     ,   .wr_m1          (me_m1          )
 
     ,   .task_req       (task_req       )
@@ -370,7 +396,7 @@ mmp_iddmm_sp #(
 
 
 
-assign wr_ena       = {wr_ena_y,wr_ena_x};
+assign wr_ena       = {wr_ena_m,wr_ena_y,wr_ena_x};
 assign me_result    = result_out;
 assign me_valid     = result_valid;
 

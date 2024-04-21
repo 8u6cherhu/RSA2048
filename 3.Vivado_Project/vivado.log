@@ -1,0 +1,250 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Sat Apr 20 13:23:21 2024
+# Process ID: 44896
+# Current directory: E:/github/fpga_project/RSA2048/Vivado_Project/RSA2048
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent47156 E:\github\fpga_project\RSA2048\Vivado_Project\RSA2048\RSA2048.xpr
+# Log file: E:/github/fpga_project/RSA2048/Vivado_Project/RSA2048/vivado.log
+# Journal file: E:/github/fpga_project/RSA2048/Vivado_Project/RSA2048\vivado.jou
+# Running On: y7000pr, OS: Windows, CPU Frequency: 3110 MHz, CPU Physical cores: 12, Host memory: 42732 MB
+#-----------------------------------------------------------
+start_gui
+open_project E:/github/fpga_project/RSA2048/Vivado_Project/RSA2048/RSA2048.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.3 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.3/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.1 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.1 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/Vivado2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'E:/github/fpga_project/RSA2048/Vivado_Project/RSA2048/RSA2048.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-865] Could not find the file E:/github/fpga_project/RSA2048/Vivado_Project/RSA2048/RSA2048.srcs/utils_1/imports/synth_1/mmp_iddmm_top.dcp
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado2023.1/Vivado/2023.1/data/ip'.
+open_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1632.547 ; gain = 264.344
+set_property top me_iddmm_top_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'me_iddmm_top_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/github/fpga_project/RSA2048/Vivado_Project/RSA2048/RSA2048.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Vivado2023.1/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'me_iddmm_top_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/github/fpga_project/RSA2048/Vivado_Project/RSA2048/RSA2048.sim/sim_1/behav/xsim/y.mem'
+INFO: [SIM-utils-43] Exported 'E:/github/fpga_project/RSA2048/Vivado_Project/RSA2048/RSA2048.sim/sim_1/behav/xsim/m.mem'
+INFO: [SIM-utils-43] Exported 'E:/github/fpga_project/RSA2048/Vivado_Project/RSA2048/RSA2048.sim/sim_1/behav/xsim/a0.mem'
+INFO: [SIM-utils-43] Exported 'E:/github/fpga_project/RSA2048/Vivado_Project/RSA2048/RSA2048.sim/sim_1/behav/xsim/x.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/github/fpga_project/RSA2048/Vivado_Project/RSA2048/RSA2048.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj me_iddmm_top_tb_vlog.prj"
+ECHO 处于关闭状态。
+ECHO 处于关闭状态。
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/r2mm/mm_r2mm_2n.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mm_r2mm_2n
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_addend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmp_iddmm_addend
+INFO: [VRFC 10-311] analyzing module fa
+INFO: [VRFC 10-311] analyzing module mmp_iddmm_addend_3_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/common/simple_vedic_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simple_vedic_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/common/simple_p12adder256_3_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simple_p12adder256_3_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/r2mm/mm_r2mm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mm_r2mm
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_sp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmp_iddmm_sp
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/common/mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/common/simple_vedic_8bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simple_vedic_8bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/r2mm/me_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module me_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/common/simple_vedic_16bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simple_vedic_16bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmp_iddmm_shift
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_pe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmp_iddmm_pe
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/ahb/ahb_rsa2048.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ahb_rsa2048
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/ahb/fifo_rsa2048_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_rsa2048_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/ahb/ahb_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ahb_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_mul128.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmp_iddmm_mul128
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_addfirst.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmp_iddmm_addfirst
+INFO: [VRFC 10-311] analyzing module fa_
+INFO: [VRFC 10-311] analyzing module mmp_iddmm_addfirst_3_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmp_iddmm_ctrl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/me_iddmm_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module me_iddmm_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/ahb/ahb2fifo_slave_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ahb2fifo_slave_core
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mm_iddmm_sub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mm_iddmm_sub
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/common/simple_p1adder129.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simple_p1adder129
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/common/simple_vedic_128bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simple_vedic_128bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/common/simple_vedic_4bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simple_vedic_4bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/common/simple_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simple_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/common/simple_vedic_64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simple_vedic_64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/sim/mmp_iddmm_sp_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmp_iddmm_sp_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/sim/bfm_ahb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bfm_ahb
+WARNING: [VRFC 10-8497] literal value 'hffff_ffff truncated to fit in 16 bits [E:/github/fpga_project/RSA2048/Vivado_Project/RTL/sim/bfm_ahb.v:101]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/sim/ahb_rsa2048_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ahb_rsa2048_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/sim/me_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module me_top_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/sim/me_iddmm_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module me_iddmm_top_tb
+WARNING: [VRFC 10-8374] loop variable declaration is not allowed in this mode of Verilog [E:/github/fpga_project/RSA2048/Vivado_Project/RTL/sim/me_iddmm_top_tb.v:71]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/github/fpga_project/RSA2048/Vivado_Project/RSA2048/RSA2048.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot me_iddmm_top_tb_behav xil_defaultlib.me_iddmm_top_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO 处于关闭状态。
+ECHO 处于关闭状态。
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Vivado2023.1/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot me_iddmm_top_tb_behav xil_defaultlib.me_iddmm_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 128 for port 'wr_m' [E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/me_iddmm_top.sv:453]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'clra_addr' [E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_sp.v:167]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'addr_a' [E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_sp.v:171]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'addr_m' [E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_sp.v:172]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'rdaddress' [E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_sp.v:184]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'rdaddress' [E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_sp.v:196]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'wren' [E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_sp.v:206]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'rdaddress' [E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_sp.v:208]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'wraddress' [E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_sp.v:217]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'rdaddress' [E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_sp.v:220]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_sp.v" Line 15. Module mmp_iddmm_sp(MULT_METHOD="COMMON",ADD1_METHOD="COMMON",ADD2_METHOD="COMMON") doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=6) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_pe.v" Line 30. Module mmp_iddmm_pe(N=16) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=128) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=128) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_addend.v" Line 8. Module mmp_iddmm_addend_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_sp.v" Line 15. Module mmp_iddmm_sp(MULT_METHOD="COMMON",ADD1_METHOD="COMMON",ADD2_METHOD="COMMON") doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=6) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_pe.v" Line 30. Module mmp_iddmm_pe(N=16) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=128) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=128) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_addend.v" Line 8. Module mmp_iddmm_addend_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mmp_iddmm_shift(LATENCY=0,WD=6)
+Compiling module xil_defaultlib.mmp_iddmm_ctrl(N=16)
+Compiling module xil_defaultlib.mmp_iddmm_shift(LATENCY=0,WD=128...
+Compiling module xil_defaultlib.mmp_iddmm_shift(LATENCY=0,WD=1)
+Compiling module xil_defaultlib.mmp_iddmm_mul128(LATENCY=0)
+Compiling module xil_defaultlib.mmp_iddmm_addfirst(LATENCY=0)
+Compiling module xil_defaultlib.mmp_iddmm_shift(LATENCY=0)
+Compiling module xil_defaultlib.mmp_iddmm_addend_default
+Compiling module xil_defaultlib.mmp_iddmm_pe(N=16)
+Compiling module xil_defaultlib.simple_p1adder129
+Compiling module xil_defaultlib.mm_iddmm_sub(N=16)
+Compiling module xil_defaultlib.simple_ram(width=128,widthad=5,f...
+Compiling module xil_defaultlib.simple_ram(width=128,widthad=4,f...
+Compiling module xil_defaultlib.simple_ram(width=128,widthad=4,f...
+Compiling module xil_defaultlib.simple_ram(width=128,widthad=4,f...
+Compiling module xil_defaultlib.mmp_iddmm_sp(MULT_METHOD="COMMON...
+Compiling module xil_defaultlib.me_iddmm_top_default
+Compiling module xil_defaultlib.me_iddmm_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot me_iddmm_top_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1632.547 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/github/fpga_project/RSA2048/Vivado_Project/RSA2048/RSA2048.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "me_iddmm_top_tb_behav -key {Behavioral:sim_1:Functional:me_iddmm_top_tb} -tclbatch {me_iddmm_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source me_iddmm_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: Too many words specified in data file x.mem
+WARNING: Too many words specified in data file a0.mem
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'me_iddmm_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 1633.281 ; gain = 0.734
+run 10 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 20 21:48:43 2024...

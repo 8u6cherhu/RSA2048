@@ -1,0 +1,27 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/me_iddmm_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module me_iddmm_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/ahb/ahb2fifo_slave_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ahb2fifo_slave_core
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mm_iddmm_sub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mm_iddmm_sub
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/common/simple_p1adder129.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simple_p1adder129
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/common/simple_vedic_128bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simple_vedic_128bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/common/simple_vedic_4bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simple_vedic_4bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/common/simple_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simple_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/common/simple_vedic_64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simple_vedic_64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/sim/mmp_iddmm_sp_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmp_iddmm_sp_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/sim/bfm_ahb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bfm_ahb
+WARNING: [VRFC 10-8497] literal value 'hffff_ffff truncated to fit in 16 bits [E:/github/fpga_project/RSA2048/Vivado_Project/RTL/sim/bfm_ahb.v:101]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/sim/ahb_rsa2048_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ahb_rsa2048_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/sim/me_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module me_top_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/sim/me_iddmm_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module me_iddmm_top_tb

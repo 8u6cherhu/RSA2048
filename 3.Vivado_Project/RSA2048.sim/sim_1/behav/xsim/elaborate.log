@@ -1,0 +1,65 @@
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Vivado2023.1/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot me_iddmm_top_tb_behav xil_defaultlib.me_iddmm_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'clra_addr' [E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_sp.v:174]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'addr_a' [E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_sp.v:178]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'addr_m' [E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_sp.v:179]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 5 for port 'rdaddress' [E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_sp.v:191]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'rdaddress' [E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_sp.v:203]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'rdaddress' [E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_sp.v:215]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'wraddress' [E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_sp.v:224]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'rdaddress' [E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_sp.v:227]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_sp.v" Line 15. Module mmp_iddmm_sp(MULT_METHOD="COMMON",ADD1_METHOD="COMMON",ADD2_METHOD="COMMON") doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=6) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_pe.v" Line 30. Module mmp_iddmm_pe(N=16) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=128) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=128) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_addend.v" Line 8. Module mmp_iddmm_addend_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_sp.v" Line 15. Module mmp_iddmm_sp(MULT_METHOD="COMMON",ADD1_METHOD="COMMON",ADD2_METHOD="COMMON") doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=6) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_pe.v" Line 30. Module mmp_iddmm_pe(N=16) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=128) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=128) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0,WD=1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_shift.v" Line 8. Module mmp_iddmm_shift(LATENCY=0) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/fpga_project/RSA2048/Vivado_Project/RTL/source/iddmm/mmp_iddmm_addend.v" Line 8. Module mmp_iddmm_addend_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mmp_iddmm_shift(LATENCY=0,WD=6)
+Compiling module xil_defaultlib.mmp_iddmm_ctrl(N=16)
+Compiling module xil_defaultlib.mmp_iddmm_shift(LATENCY=0,WD=128...
+Compiling module xil_defaultlib.mmp_iddmm_shift(LATENCY=0,WD=1)
+Compiling module xil_defaultlib.mmp_iddmm_mul128(LATENCY=0)
+Compiling module xil_defaultlib.mmp_iddmm_addfirst(LATENCY=0)
+Compiling module xil_defaultlib.mmp_iddmm_shift(LATENCY=0)
+Compiling module xil_defaultlib.mmp_iddmm_addend_default
+Compiling module xil_defaultlib.mmp_iddmm_pe(N=16)
+Compiling module xil_defaultlib.simple_p1adder129
+Compiling module xil_defaultlib.mm_iddmm_sub(N=16)
+Compiling module xil_defaultlib.simple_ram(width=128,widthad=5,f...
+Compiling module xil_defaultlib.simple_ram(width=128,widthad=4,f...
+Compiling module xil_defaultlib.simple_ram(width=128,widthad=4,f...
+Compiling module xil_defaultlib.simple_ram(width=128,widthad=4,f...
+Compiling module xil_defaultlib.mmp_iddmm_sp(MULT_METHOD="COMMON...
+Compiling module xil_defaultlib.me_iddmm_top_default
+Compiling module xil_defaultlib.me_iddmm_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot me_iddmm_top_tb_behav

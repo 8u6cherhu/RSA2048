@@ -1,0 +1,1046 @@
+
+*** Running vivado
+    with args -log mmp_iddmm_sp.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source mmp_iddmm_sp.tcl
+
+
+ECHO 处于关闭状态。
+ECHO 处于关闭状态。
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+Sourcing tcl script 'D:/Vivado2023.1/Vivado/2023.1/scripts/Vivado_init.tcl'
+source mmp_iddmm_sp.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/utils_1/imports/synth_1/mmp_iddmm_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/utils_1/imports/synth_1/mmp_iddmm_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top mmp_iddmm_sp -part xczu5ev-sfvc784-2-i
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu5ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu5ev'
+INFO: [Device 21-403] Loading part xczu5ev-sfvc784-2-i
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 24908
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1845.824 ; gain = 343.746
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'mmp_iddmm_sp' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_sp.v:15]
+INFO: [Synth 8-6157] synthesizing module 'mmp_iddmm_ctrl' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_ctrl.v:10]
+	Parameter L1 bound to: 0 - type: integer 
+	Parameter L2 bound to: 0 - type: integer 
+	Parameter L3 bound to: 0 - type: integer 
+	Parameter L4 bound to: 0 - type: integer 
+	Parameter D5 bound to: 1 - type: integer 
+	Parameter N bound to: 16 - type: integer 
+	Parameter K bound to: 128 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mmp_iddmm_shift' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_shift.v:8]
+	Parameter LATENCY bound to: 0 - type: integer 
+	Parameter WD bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mmp_iddmm_shift' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_shift.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'mmp_iddmm_ctrl' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_ctrl.v:10]
+INFO: [Synth 8-6157] synthesizing module 'mmp_iddmm_pe' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_pe.v:30]
+	Parameter L1 bound to: 0 - type: integer 
+	Parameter L2 bound to: 0 - type: integer 
+	Parameter L3 bound to: 0 - type: integer 
+	Parameter L4 bound to: 0 - type: integer 
+	Parameter MULT_METHOD bound to: TRADITION - type: string 
+	Parameter ADD1_METHOD bound to: 3-2_PIPE1 - type: string 
+	Parameter ADD2_METHOD bound to: 3-2_DELAY2 - type: string 
+	Parameter D5 bound to: 1 - type: integer 
+	Parameter K bound to: 128 - type: integer 
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mmp_iddmm_shift__parameterized0' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_shift.v:8]
+	Parameter LATENCY bound to: 0 - type: integer 
+	Parameter WD bound to: 128 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mmp_iddmm_shift__parameterized0' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_shift.v:8]
+INFO: [Synth 8-6157] synthesizing module 'mmp_iddmm_shift__parameterized1' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_shift.v:8]
+	Parameter LATENCY bound to: 0 - type: integer 
+	Parameter WD bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mmp_iddmm_shift__parameterized1' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_shift.v:8]
+INFO: [Synth 8-6157] synthesizing module 'mmp_iddmm_shift__parameterized2' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_shift.v:8]
+	Parameter LATENCY bound to: 1 - type: integer 
+	Parameter WD bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mmp_iddmm_shift__parameterized2' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_shift.v:8]
+INFO: [Synth 8-6157] synthesizing module 'mmp_iddmm_mul128' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_mul128.v:9]
+	Parameter LATENCY bound to: 0 - type: integer 
+	Parameter METHOD bound to: TRADITION - type: string 
+INFO: [Synth 8-6157] synthesizing module 'mult' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/common/mult.v:27]
+INFO: [Synth 8-6157] synthesizing module 'simple_p12adder256_3_2' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/common/simple_p12adder256_3_2.v:8]
+	Parameter STAGE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'simple_p12adder256_3_2' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/common/simple_p12adder256_3_2.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'mult' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/common/mult.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'mmp_iddmm_mul128' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_mul128.v:9]
+INFO: [Synth 8-6157] synthesizing module 'mmp_iddmm_addfirst' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_addfirst.v:8]
+	Parameter LATENCY bound to: 0 - type: integer 
+	Parameter METHOD bound to: 3-2_PIPE1 - type: string 
+INFO: [Synth 8-6157] synthesizing module 'mmp_iddmm_addfirst_3_2' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_addfirst.v:110]
+	Parameter STAGE bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fa_' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_addfirst.v:91]
+INFO: [Synth 8-6155] done synthesizing module 'fa_' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_addfirst.v:91]
+INFO: [Synth 8-6157] synthesizing module 'simple_p12adder256_3_2__parameterized0' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/common/simple_p12adder256_3_2.v:8]
+	Parameter STAGE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'simple_p12adder256_3_2__parameterized0' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/common/simple_p12adder256_3_2.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'mmp_iddmm_addfirst_3_2' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_addfirst.v:110]
+INFO: [Synth 8-6155] done synthesizing module 'mmp_iddmm_addfirst' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_addfirst.v:8]
+INFO: [Synth 8-6157] synthesizing module 'mmp_iddmm_shift__parameterized3' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_shift.v:8]
+	Parameter LATENCY bound to: 0 - type: integer 
+	Parameter WD bound to: 256 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mmp_iddmm_shift__parameterized3' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_shift.v:8]
+INFO: [Synth 8-6157] synthesizing module 'mmp_iddmm_addend' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_addend.v:8]
+	Parameter LATENCY bound to: 1 - type: integer 
+	Parameter METHOD bound to: 3-2_DELAY2 - type: string 
+INFO: [Synth 8-6157] synthesizing module 'mmp_iddmm_addend_3_2' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_addend.v:96]
+INFO: [Synth 8-6157] synthesizing module 'fa' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_addend.v:78]
+INFO: [Synth 8-6155] done synthesizing module 'fa' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_addend.v:78]
+INFO: [Synth 8-6155] done synthesizing module 'mmp_iddmm_addend_3_2' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_addend.v:96]
+INFO: [Synth 8-6155] done synthesizing module 'mmp_iddmm_addend' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_addend.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'mmp_iddmm_pe' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_pe.v:30]
+INFO: [Synth 8-6157] synthesizing module 'mm_iddmm_sub' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mm_iddmm_sub.v:16]
+	Parameter K bound to: 128 - type: integer 
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'simple_p1adder129' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/common/simple_p1adder129.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'simple_p1adder129' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/common/simple_p1adder129.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'mm_iddmm_sub' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mm_iddmm_sub.v:16]
+WARNING: [Synth 8-689] width (5) of port connection 'clra_addr' does not match port width (4) of module 'mm_iddmm_sub' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_sp.v:167]
+WARNING: [Synth 8-689] width (5) of port connection 'addr_a' does not match port width (4) of module 'mm_iddmm_sub' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_sp.v:171]
+WARNING: [Synth 8-689] width (5) of port connection 'addr_m' does not match port width (4) of module 'mm_iddmm_sub' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_sp.v:172]
+INFO: [Synth 8-6157] synthesizing module 'simple_ram' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/common/simple_ram.v:29]
+	Parameter width bound to: 128 - type: integer 
+	Parameter widthad bound to: 5 - type: integer 
+	Parameter filename bound to: x.mem - type: string 
+INFO: [Synth 8-3876] $readmem data file 'x.mem' is read successfully [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/common/simple_ram.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'simple_ram' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/common/simple_ram.v:29]
+WARNING: [Synth 8-689] width (6) of port connection 'rdaddress' does not match port width (5) of module 'simple_ram' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_sp.v:184]
+INFO: [Synth 8-6157] synthesizing module 'simple_ram__parameterized0' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/common/simple_ram.v:29]
+	Parameter width bound to: 128 - type: integer 
+	Parameter widthad bound to: 4 - type: integer 
+	Parameter filename bound to: y.mem - type: string 
+INFO: [Synth 8-3876] $readmem data file 'y.mem' is read successfully [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/common/simple_ram.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'simple_ram__parameterized0' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/common/simple_ram.v:29]
+WARNING: [Synth 8-689] width (5) of port connection 'rdaddress' does not match port width (4) of module 'simple_ram__parameterized0' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_sp.v:196]
+INFO: [Synth 8-6157] synthesizing module 'simple_ram__parameterized1' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/common/simple_ram.v:29]
+	Parameter width bound to: 128 - type: integer 
+	Parameter widthad bound to: 4 - type: integer 
+	Parameter filename bound to: m.mem - type: string 
+INFO: [Synth 8-3876] $readmem data file 'm.mem' is read successfully [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/common/simple_ram.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'simple_ram__parameterized1' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/common/simple_ram.v:29]
+WARNING: [Synth 8-689] width (5) of port connection 'rdaddress' does not match port width (4) of module 'simple_ram__parameterized1' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_sp.v:208]
+INFO: [Synth 8-6157] synthesizing module 'simple_ram__parameterized2' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/common/simple_ram.v:29]
+	Parameter width bound to: 128 - type: integer 
+	Parameter widthad bound to: 4 - type: integer 
+	Parameter filename bound to: a0.mem - type: string 
+INFO: [Synth 8-3876] $readmem data file 'a0.mem' is read successfully [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/common/simple_ram.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'simple_ram__parameterized2' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/common/simple_ram.v:29]
+WARNING: [Synth 8-689] width (5) of port connection 'wraddress' does not match port width (4) of module 'simple_ram__parameterized2' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_sp.v:217]
+WARNING: [Synth 8-689] width (5) of port connection 'rdaddress' does not match port width (4) of module 'simple_ram__parameterized2' [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_sp.v:220]
+INFO: [Synth 8-6155] done synthesizing module 'mmp_iddmm_sp' (0#1) [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_sp.v:15]
+WARNING: [Synth 8-6014] Unused sequential element d5_eq_1.i_reg was removed.  [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_ctrl.v:232]
+WARNING: [Synth 8-6014] Unused sequential element d5_eq_1.j00_reg was removed.  [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/sources_1/new/mmp_iddmm_ctrl.v:234]
+WARNING: [Synth 8-7129] Port rst_n in module mmp_iddmm_addend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module mmp_iddmm_shift__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst_n in module mmp_iddmm_shift__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst_n in module mult is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst_n in module mmp_iddmm_addfirst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module mmp_iddmm_shift__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst_n in module mmp_iddmm_shift__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module mmp_iddmm_shift__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst_n in module mmp_iddmm_shift__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module mmp_iddmm_shift is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst_n in module mmp_iddmm_shift is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1956.047 ; gain = 453.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1956.047 ; gain = 453.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1956.047 ; gain = 453.969
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.255 . Memory (MB): peak = 1956.047 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/constrs_1/new/mm_r2mm.xdc]
+Finished Parsing XDC File [E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.srcs/constrs_1/new/mm_r2mm.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2079.383 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.241 . Memory (MB): peak = 2079.383 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 2079.383 ; gain = 577.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu5ev-sfvc784-2-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 2079.383 ; gain = 577.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 2079.383 ; gain = 577.305
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'd5_eq_1.st_reg' in module 'mmp_iddmm_ctrl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 |                              000
+                 iSTATE1 |                              001 |                              001
+                 iSTATE0 |                              010 |                              010
+                 iSTATE2 |                              011 |                              011
+                 iSTATE3 |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'd5_eq_1.st_reg' using encoding 'sequential' in module 'mmp_iddmm_ctrl'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 2079.383 ; gain = 577.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input  256 Bit       Adders := 9     
+	   2 Input  242 Bit       Adders := 3     
+	   2 Input  230 Bit       Adders := 3     
+	   2 Input  229 Bit       Adders := 3     
+	   2 Input  228 Bit       Adders := 3     
+	   2 Input  227 Bit       Adders := 3     
+	   2 Input  197 Bit       Adders := 3     
+	   2 Input  196 Bit       Adders := 3     
+	   2 Input  164 Bit       Adders := 3     
+	   2 Input  132 Bit       Adders := 3     
+	   2 Input  129 Bit       Adders := 5     
+	   3 Input  129 Bit       Adders := 6     
+	   2 Input   83 Bit       Adders := 3     
+	   3 Input   66 Bit       Adders := 1     
+	   2 Input   65 Bit       Adders := 1     
+	   2 Input   35 Bit       Adders := 15    
+	   2 Input   34 Bit       Adders := 30    
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 5     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1024  
++---Registers : 
+	              256 Bit    Registers := 18    
+	              242 Bit    Registers := 3     
+	              241 Bit    Registers := 3     
+	              230 Bit    Registers := 3     
+	              229 Bit    Registers := 3     
+	              228 Bit    Registers := 3     
+	              227 Bit    Registers := 3     
+	              226 Bit    Registers := 3     
+	              210 Bit    Registers := 3     
+	              197 Bit    Registers := 3     
+	              196 Bit    Registers := 3     
+	              195 Bit    Registers := 3     
+	              179 Bit    Registers := 3     
+	              164 Bit    Registers := 3     
+	              163 Bit    Registers := 3     
+	              147 Bit    Registers := 3     
+	              132 Bit    Registers := 3     
+	              131 Bit    Registers := 3     
+	              129 Bit    Registers := 1     
+	              128 Bit    Registers := 28    
+	              115 Bit    Registers := 3     
+	               99 Bit    Registers := 3     
+	               83 Bit    Registers := 3     
+	               82 Bit    Registers := 3     
+	               66 Bit    Registers := 3     
+	               65 Bit    Registers := 2     
+	               64 Bit    Registers := 1     
+	               49 Bit    Registers := 3     
+	               35 Bit    Registers := 15    
+	               34 Bit    Registers := 24    
+	               33 Bit    Registers := 90    
+	               32 Bit    Registers := 3     
+	               16 Bit    Registers := 21    
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 28    
++---Muxes : 
+	   2 Input  129 Bit        Muxes := 3     
+	   2 Input  128 Bit        Muxes := 5     
+	   2 Input    6 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 10    
+	   6 Input    4 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 6     
+	  11 Input    3 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 10    
+	   5 Input    1 Bit        Muxes := 8     
+	  11 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP x6y5_reg, operation Mode is: (A*B)'.
+DSP Report: register x6y5_reg is absorbed into DSP x6y5_reg.
+DSP Report: operator x6y50 is absorbed into DSP x6y5_reg.
+DSP Report: Generating DSP sum065_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum065_reg is absorbed into DSP sum065_reg.
+DSP Report: register x5y6_reg is absorbed into DSP sum065_reg.
+DSP Report: operator sum0650 is absorbed into DSP sum065_reg.
+DSP Report: operator x5y60 is absorbed into DSP sum065_reg.
+DSP Report: Generating DSP x7y4_reg, operation Mode is: (A*B)'.
+DSP Report: register x7y4_reg is absorbed into DSP x7y4_reg.
+DSP Report: operator x7y40 is absorbed into DSP x7y4_reg.
+DSP Report: Generating DSP sum074_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum074_reg is absorbed into DSP sum074_reg.
+DSP Report: register x4y7_reg is absorbed into DSP sum074_reg.
+DSP Report: operator sum0740 is absorbed into DSP sum074_reg.
+DSP Report: operator x4y70 is absorbed into DSP sum074_reg.
+DSP Report: Generating DSP x7y5_reg, operation Mode is: (A*B)'.
+DSP Report: register x7y5_reg is absorbed into DSP x7y5_reg.
+DSP Report: operator x7y50 is absorbed into DSP x7y5_reg.
+DSP Report: Generating DSP sum075_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum075_reg is absorbed into DSP sum075_reg.
+DSP Report: register x5y7_reg is absorbed into DSP sum075_reg.
+DSP Report: operator sum0750 is absorbed into DSP sum075_reg.
+DSP Report: operator x5y70 is absorbed into DSP sum075_reg.
+DSP Report: Generating DSP sum112_reg, operation Mode is: (PCIN+(A2*B2)')'.
+DSP Report: register x6y6_reg is absorbed into DSP sum112_reg.
+DSP Report: register x6y6_reg is absorbed into DSP sum112_reg.
+DSP Report: register sum112_reg is absorbed into DSP sum112_reg.
+DSP Report: register sum066_reg is absorbed into DSP sum112_reg.
+DSP Report: operator sum1120 is absorbed into DSP sum112_reg.
+DSP Report: operator x6y60 is absorbed into DSP sum112_reg.
+DSP Report: Generating DSP x3y1_reg, operation Mode is: (A*B)'.
+DSP Report: register x3y1_reg is absorbed into DSP x3y1_reg.
+DSP Report: operator x3y10 is absorbed into DSP x3y1_reg.
+DSP Report: Generating DSP sum031_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum031_reg is absorbed into DSP sum031_reg.
+DSP Report: register x1y3_reg is absorbed into DSP sum031_reg.
+DSP Report: operator sum0310 is absorbed into DSP sum031_reg.
+DSP Report: operator x1y30 is absorbed into DSP sum031_reg.
+DSP Report: Generating DSP x4y0_reg, operation Mode is: (A*B)'.
+DSP Report: register x4y0_reg is absorbed into DSP x4y0_reg.
+DSP Report: operator x4y00 is absorbed into DSP x4y0_reg.
+DSP Report: Generating DSP sum040_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum040_reg is absorbed into DSP sum040_reg.
+DSP Report: register x0y4_reg is absorbed into DSP sum040_reg.
+DSP Report: operator sum0400 is absorbed into DSP sum040_reg.
+DSP Report: operator x0y40 is absorbed into DSP sum040_reg.
+DSP Report: Generating DSP sum204_reg, operation Mode is: (C'+(A''*B'')')'.
+DSP Report: register x2y2_reg is absorbed into DSP sum204_reg.
+DSP Report: register sum022_reg is absorbed into DSP sum204_reg.
+DSP Report: register x2y2_reg is absorbed into DSP sum204_reg.
+DSP Report: register sum022_reg is absorbed into DSP sum204_reg.
+DSP Report: register sum104_a_reg is absorbed into DSP sum204_reg.
+DSP Report: register sum204_reg is absorbed into DSP sum204_reg.
+DSP Report: register sum104_b_reg is absorbed into DSP sum204_reg.
+DSP Report: operator sum2040 is absorbed into DSP sum204_reg.
+DSP Report: operator x2y20 is absorbed into DSP sum204_reg.
+DSP Report: Generating DSP x3y2_reg, operation Mode is: (A*B)'.
+DSP Report: register x3y2_reg is absorbed into DSP x3y2_reg.
+DSP Report: operator x3y20 is absorbed into DSP x3y2_reg.
+DSP Report: Generating DSP sum032_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum032_reg is absorbed into DSP sum032_reg.
+DSP Report: register x2y3_reg is absorbed into DSP sum032_reg.
+DSP Report: operator sum0320 is absorbed into DSP sum032_reg.
+DSP Report: operator x2y30 is absorbed into DSP sum032_reg.
+DSP Report: Generating DSP x4y1_reg, operation Mode is: (A*B)'.
+DSP Report: register x4y1_reg is absorbed into DSP x4y1_reg.
+DSP Report: operator x4y10 is absorbed into DSP x4y1_reg.
+DSP Report: Generating DSP sum041_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum041_reg is absorbed into DSP sum041_reg.
+DSP Report: register x1y4_reg is absorbed into DSP sum041_reg.
+DSP Report: operator sum0410 is absorbed into DSP sum041_reg.
+DSP Report: operator x1y40 is absorbed into DSP sum041_reg.
+DSP Report: Generating DSP x5y0_reg, operation Mode is: (A*B)'.
+DSP Report: register x5y0_reg is absorbed into DSP x5y0_reg.
+DSP Report: operator x5y00 is absorbed into DSP x5y0_reg.
+DSP Report: Generating DSP sum050_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum050_reg is absorbed into DSP sum050_reg.
+DSP Report: register x0y5_reg is absorbed into DSP sum050_reg.
+DSP Report: operator sum0500 is absorbed into DSP sum050_reg.
+DSP Report: operator x0y50 is absorbed into DSP sum050_reg.
+DSP Report: Generating DSP x4y2_reg, operation Mode is: (A*B)'.
+DSP Report: register x4y2_reg is absorbed into DSP x4y2_reg.
+DSP Report: operator x4y20 is absorbed into DSP x4y2_reg.
+DSP Report: Generating DSP sum042_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum042_reg is absorbed into DSP sum042_reg.
+DSP Report: register x2y4_reg is absorbed into DSP sum042_reg.
+DSP Report: operator sum0420 is absorbed into DSP sum042_reg.
+DSP Report: operator x2y40 is absorbed into DSP sum042_reg.
+DSP Report: Generating DSP sum106_b_reg, operation Mode is: (PCIN+(A2*B2)')'.
+DSP Report: register x3y3_reg is absorbed into DSP sum106_b_reg.
+DSP Report: register x3y3_reg is absorbed into DSP sum106_b_reg.
+DSP Report: register sum106_b_reg is absorbed into DSP sum106_b_reg.
+DSP Report: register sum033_reg is absorbed into DSP sum106_b_reg.
+DSP Report: operator sum106_b0 is absorbed into DSP sum106_b_reg.
+DSP Report: operator x3y30 is absorbed into DSP sum106_b_reg.
+DSP Report: Generating DSP x5y1_reg, operation Mode is: (A*B)'.
+DSP Report: register x5y1_reg is absorbed into DSP x5y1_reg.
+DSP Report: operator x5y10 is absorbed into DSP x5y1_reg.
+DSP Report: Generating DSP sum051_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum051_reg is absorbed into DSP sum051_reg.
+DSP Report: register x1y5_reg is absorbed into DSP sum051_reg.
+DSP Report: operator sum0510 is absorbed into DSP sum051_reg.
+DSP Report: operator x1y50 is absorbed into DSP sum051_reg.
+DSP Report: Generating DSP x6y0_reg, operation Mode is: (A*B)'.
+DSP Report: register x6y0_reg is absorbed into DSP x6y0_reg.
+DSP Report: operator x6y00 is absorbed into DSP x6y0_reg.
+DSP Report: Generating DSP sum060_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum060_reg is absorbed into DSP sum060_reg.
+DSP Report: register x0y6_reg is absorbed into DSP sum060_reg.
+DSP Report: operator sum0600 is absorbed into DSP sum060_reg.
+DSP Report: operator x0y60 is absorbed into DSP sum060_reg.
+DSP Report: Generating DSP x4y3_reg, operation Mode is: (A*B)'.
+DSP Report: register x4y3_reg is absorbed into DSP x4y3_reg.
+DSP Report: operator x4y30 is absorbed into DSP x4y3_reg.
+DSP Report: Generating DSP sum043_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum043_reg is absorbed into DSP sum043_reg.
+DSP Report: register x3y4_reg is absorbed into DSP sum043_reg.
+DSP Report: operator sum0430 is absorbed into DSP sum043_reg.
+DSP Report: operator x3y40 is absorbed into DSP sum043_reg.
+DSP Report: Generating DSP x5y2_reg, operation Mode is: (A*B)'.
+DSP Report: register x5y2_reg is absorbed into DSP x5y2_reg.
+DSP Report: operator x5y20 is absorbed into DSP x5y2_reg.
+DSP Report: Generating DSP sum052_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum052_reg is absorbed into DSP sum052_reg.
+DSP Report: register x2y5_reg is absorbed into DSP sum052_reg.
+DSP Report: operator sum0520 is absorbed into DSP sum052_reg.
+DSP Report: operator x2y50 is absorbed into DSP sum052_reg.
+DSP Report: Generating DSP x6y1_reg, operation Mode is: (A*B)'.
+DSP Report: register x6y1_reg is absorbed into DSP x6y1_reg.
+DSP Report: operator x6y10 is absorbed into DSP x6y1_reg.
+DSP Report: Generating DSP sum061_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum061_reg is absorbed into DSP sum061_reg.
+DSP Report: register x1y6_reg is absorbed into DSP sum061_reg.
+DSP Report: operator sum0610 is absorbed into DSP sum061_reg.
+DSP Report: operator x1y60 is absorbed into DSP sum061_reg.
+DSP Report: Generating DSP x7y0_reg, operation Mode is: (A*B)'.
+DSP Report: register x7y0_reg is absorbed into DSP x7y0_reg.
+DSP Report: operator x7y00 is absorbed into DSP x7y0_reg.
+DSP Report: Generating DSP sum070_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum070_reg is absorbed into DSP sum070_reg.
+DSP Report: register x0y7_reg is absorbed into DSP sum070_reg.
+DSP Report: operator sum0700 is absorbed into DSP sum070_reg.
+DSP Report: operator x0y70 is absorbed into DSP sum070_reg.
+DSP Report: Generating DSP x5y3_reg, operation Mode is: (A*B)'.
+DSP Report: register x5y3_reg is absorbed into DSP x5y3_reg.
+DSP Report: operator x5y30 is absorbed into DSP x5y3_reg.
+DSP Report: Generating DSP sum053_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum053_reg is absorbed into DSP sum053_reg.
+DSP Report: register x3y5_reg is absorbed into DSP sum053_reg.
+DSP Report: operator sum0530 is absorbed into DSP sum053_reg.
+DSP Report: operator x3y50 is absorbed into DSP sum053_reg.
+DSP Report: Generating DSP sum108_b_reg, operation Mode is: (PCIN+(A2*B2)')'.
+DSP Report: register x4y4_reg is absorbed into DSP sum108_b_reg.
+DSP Report: register x4y4_reg is absorbed into DSP sum108_b_reg.
+DSP Report: register sum108_b_reg is absorbed into DSP sum108_b_reg.
+DSP Report: register sum044_reg is absorbed into DSP sum108_b_reg.
+DSP Report: operator sum108_b0 is absorbed into DSP sum108_b_reg.
+DSP Report: operator x4y40 is absorbed into DSP sum108_b_reg.
+DSP Report: Generating DSP x6y2_reg, operation Mode is: (A*B)'.
+DSP Report: register x6y2_reg is absorbed into DSP x6y2_reg.
+DSP Report: operator x6y20 is absorbed into DSP x6y2_reg.
+DSP Report: Generating DSP sum062_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum062_reg is absorbed into DSP sum062_reg.
+DSP Report: register x2y6_reg is absorbed into DSP sum062_reg.
+DSP Report: operator sum0620 is absorbed into DSP sum062_reg.
+DSP Report: operator x2y60 is absorbed into DSP sum062_reg.
+DSP Report: Generating DSP x7y1_reg, operation Mode is: (A*B)'.
+DSP Report: register x7y1_reg is absorbed into DSP x7y1_reg.
+DSP Report: operator x7y10 is absorbed into DSP x7y1_reg.
+DSP Report: Generating DSP sum071_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum071_reg is absorbed into DSP sum071_reg.
+DSP Report: register x1y7_reg is absorbed into DSP sum071_reg.
+DSP Report: operator sum0710 is absorbed into DSP sum071_reg.
+DSP Report: operator x1y70 is absorbed into DSP sum071_reg.
+DSP Report: Generating DSP x5y4_reg, operation Mode is: (A*B)'.
+DSP Report: register x5y4_reg is absorbed into DSP x5y4_reg.
+DSP Report: operator x5y40 is absorbed into DSP x5y4_reg.
+DSP Report: Generating DSP sum054_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum054_reg is absorbed into DSP sum054_reg.
+DSP Report: register x4y5_reg is absorbed into DSP sum054_reg.
+DSP Report: operator sum0540 is absorbed into DSP sum054_reg.
+DSP Report: operator x4y50 is absorbed into DSP sum054_reg.
+DSP Report: Generating DSP x6y3_reg, operation Mode is: (A*B)'.
+DSP Report: register x6y3_reg is absorbed into DSP x6y3_reg.
+DSP Report: operator x6y30 is absorbed into DSP x6y3_reg.
+DSP Report: Generating DSP sum063_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum063_reg is absorbed into DSP sum063_reg.
+DSP Report: register x3y6_reg is absorbed into DSP sum063_reg.
+DSP Report: operator sum0630 is absorbed into DSP sum063_reg.
+DSP Report: operator x3y60 is absorbed into DSP sum063_reg.
+DSP Report: Generating DSP x7y2_reg, operation Mode is: (A*B)'.
+DSP Report: register x7y2_reg is absorbed into DSP x7y2_reg.
+DSP Report: operator x7y20 is absorbed into DSP x7y2_reg.
+DSP Report: Generating DSP sum072_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum072_reg is absorbed into DSP sum072_reg.
+DSP Report: register x2y7_reg is absorbed into DSP sum072_reg.
+DSP Report: operator sum0720 is absorbed into DSP sum072_reg.
+DSP Report: operator x2y70 is absorbed into DSP sum072_reg.
+DSP Report: Generating DSP x6y4_reg, operation Mode is: (A*B)'.
+DSP Report: register x6y4_reg is absorbed into DSP x6y4_reg.
+DSP Report: operator x6y40 is absorbed into DSP x6y4_reg.
+DSP Report: Generating DSP sum064_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum064_reg is absorbed into DSP sum064_reg.
+DSP Report: register x4y6_reg is absorbed into DSP sum064_reg.
+DSP Report: operator sum0640 is absorbed into DSP sum064_reg.
+DSP Report: operator x4y60 is absorbed into DSP sum064_reg.
+DSP Report: Generating DSP x7y3_reg, operation Mode is: (A*B)'.
+DSP Report: register x7y3_reg is absorbed into DSP x7y3_reg.
+DSP Report: operator x7y30 is absorbed into DSP x7y3_reg.
+DSP Report: Generating DSP sum073_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum073_reg is absorbed into DSP sum073_reg.
+DSP Report: register x3y7_reg is absorbed into DSP sum073_reg.
+DSP Report: operator sum0730 is absorbed into DSP sum073_reg.
+DSP Report: operator x3y70 is absorbed into DSP sum073_reg.
+DSP Report: Generating DSP sum210_reg, operation Mode is: (C'+(A''*B'')')'.
+DSP Report: register x5y5_reg is absorbed into DSP sum210_reg.
+DSP Report: register sum055_reg is absorbed into DSP sum210_reg.
+DSP Report: register x5y5_reg is absorbed into DSP sum210_reg.
+DSP Report: register sum055_reg is absorbed into DSP sum210_reg.
+DSP Report: register sum110_a_reg is absorbed into DSP sum210_reg.
+DSP Report: register sum210_reg is absorbed into DSP sum210_reg.
+DSP Report: register sum110_b_reg is absorbed into DSP sum210_reg.
+DSP Report: operator sum2100 is absorbed into DSP sum210_reg.
+DSP Report: operator x5y50 is absorbed into DSP sum210_reg.
+DSP Report: Generating DSP x1y0_reg, operation Mode is: (A*B)'.
+DSP Report: register x1y0_reg is absorbed into DSP x1y0_reg.
+DSP Report: operator x1y00 is absorbed into DSP x1y0_reg.
+DSP Report: Generating DSP sum010_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum010_reg is absorbed into DSP sum010_reg.
+DSP Report: register x0y1_reg is absorbed into DSP sum010_reg.
+DSP Report: operator sum0100 is absorbed into DSP sum010_reg.
+DSP Report: operator x0y10 is absorbed into DSP sum010_reg.
+DSP Report: Generating DSP x7y6_reg, operation Mode is: (A*B)'.
+DSP Report: register x7y6_reg is absorbed into DSP x7y6_reg.
+DSP Report: operator x7y60 is absorbed into DSP x7y6_reg.
+DSP Report: Generating DSP sum076_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum076_reg is absorbed into DSP sum076_reg.
+DSP Report: register x6y7_reg is absorbed into DSP sum076_reg.
+DSP Report: operator sum0760 is absorbed into DSP sum076_reg.
+DSP Report: operator x6y70 is absorbed into DSP sum076_reg.
+DSP Report: Generating DSP sum100_s_reg, operation Mode is: (A''*B'')'.
+DSP Report: register x0y0_reg is absorbed into DSP sum100_s_reg.
+DSP Report: register sum000_reg is absorbed into DSP sum100_s_reg.
+DSP Report: register x0y0_reg is absorbed into DSP sum100_s_reg.
+DSP Report: register sum000_reg is absorbed into DSP sum100_s_reg.
+DSP Report: register sum100_s_reg is absorbed into DSP sum100_s_reg.
+DSP Report: operator x0y00 is absorbed into DSP sum100_s_reg.
+DSP Report: Generating DSP sum077_reg, operation Mode is: (A*B)'.
+DSP Report: register sum077_reg is absorbed into DSP sum077_reg.
+DSP Report: register x7y7_reg is absorbed into DSP sum077_reg.
+DSP Report: operator x7y70 is absorbed into DSP sum077_reg.
+DSP Report: Generating DSP x2y0_reg, operation Mode is: (A*B)'.
+DSP Report: register x2y0_reg is absorbed into DSP x2y0_reg.
+DSP Report: operator x2y00 is absorbed into DSP x2y0_reg.
+DSP Report: Generating DSP sum020_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum020_reg is absorbed into DSP sum020_reg.
+DSP Report: register x0y2_reg is absorbed into DSP sum020_reg.
+DSP Report: operator sum0200 is absorbed into DSP sum020_reg.
+DSP Report: operator x0y20 is absorbed into DSP sum020_reg.
+DSP Report: Generating DSP sum102_reg, operation Mode is: (PCIN+(A2*B2)')'.
+DSP Report: register x1y1_reg is absorbed into DSP sum102_reg.
+DSP Report: register x1y1_reg is absorbed into DSP sum102_reg.
+DSP Report: register sum102_reg is absorbed into DSP sum102_reg.
+DSP Report: register sum011_reg is absorbed into DSP sum102_reg.
+DSP Report: operator sum1020 is absorbed into DSP sum102_reg.
+DSP Report: operator x1y10 is absorbed into DSP sum102_reg.
+DSP Report: Generating DSP x2y1_reg, operation Mode is: (A*B)'.
+DSP Report: register x2y1_reg is absorbed into DSP x2y1_reg.
+DSP Report: operator x2y10 is absorbed into DSP x2y1_reg.
+DSP Report: Generating DSP sum021_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum021_reg is absorbed into DSP sum021_reg.
+DSP Report: register x1y2_reg is absorbed into DSP sum021_reg.
+DSP Report: operator sum0210 is absorbed into DSP sum021_reg.
+DSP Report: operator x1y20 is absorbed into DSP sum021_reg.
+DSP Report: Generating DSP x3y0_reg, operation Mode is: (A*B)'.
+DSP Report: register x3y0_reg is absorbed into DSP x3y0_reg.
+DSP Report: operator x3y00 is absorbed into DSP x3y0_reg.
+DSP Report: Generating DSP sum030_reg, operation Mode is: (PCIN+(A*B)')'.
+DSP Report: register sum030_reg is absorbed into DSP sum030_reg.
+DSP Report: register x0y3_reg is absorbed into DSP sum030_reg.
+DSP Report: operator sum0300 is absorbed into DSP sum030_reg.
+DSP Report: operator x0y30 is absorbed into DSP sum030_reg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:23 . Memory (MB): peak = 2079.383 ; gain = 577.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-------------+----------------------+----------------+----------------------+----------------+
+|Module Name  | RTL Object           | Inference      | Size (Depth x Width) | Primitives     | 
++-------------+----------------------+----------------+----------------------+----------------+
+|mmp_iddmm_sp | simple_ram_m/mem_reg | User Attribute | 16 x 128             | RAM32M16 x 10  | 
+|mmp_iddmm_sp | simple_ram_a/mem_reg | User Attribute | 16 x 128             | RAM32M16 x 10  | 
+|mmp_iddmm_sp | simple_ram_x/mem_reg | User Attribute | 16 x 128             | RAM32M16 x 10  | 
+|mmp_iddmm_sp | simple_ram_y/mem_reg | User Attribute | 16 x 128             | RAM32M16 x 10  | 
++-------------+----------------------+----------------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (PCIN+(A2*B2)')' | 16     | 16     | -      | -      | 34     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (C'+(A''*B'')')' | 16     | 16     | 34     | -      | 35     | 2    | 2    | 1    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (PCIN+(A2*B2)')' | 16     | 16     | -      | -      | 34     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (PCIN+(A2*B2)')' | 16     | 16     | -      | -      | 34     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (C'+(A''*B'')')' | 16     | 16     | 34     | -      | 35     | 2    | 2    | 1    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A''*B'')'       | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 1    | 0    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (PCIN+(A2*B2)')' | 16     | 16     | -      | -      | 34     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'           | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|mult        | (PCIN+(A*B)')'   | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:33 . Memory (MB): peak = 2568.312 ; gain = 1066.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:37 . Memory (MB): peak = 2798.766 ; gain = 1296.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++-------------+----------------------+----------------+----------------------+----------------+
+|Module Name  | RTL Object           | Inference      | Size (Depth x Width) | Primitives     | 
++-------------+----------------------+----------------+----------------------+----------------+
+|mmp_iddmm_sp | simple_ram_m/mem_reg | User Attribute | 16 x 128             | RAM32M16 x 10  | 
+|mmp_iddmm_sp | simple_ram_a/mem_reg | User Attribute | 16 x 128             | RAM32M16 x 10  | 
+|mmp_iddmm_sp | simple_ram_x/mem_reg | User Attribute | 16 x 128             | RAM32M16 x 10  | 
+|mmp_iddmm_sp | simple_ram_y/mem_reg | User Attribute | 16 x 128             | RAM32M16 x 10  | 
++-------------+----------------------+----------------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:45 . Memory (MB): peak = 2813.188 ; gain = 1311.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:48 . Memory (MB): peak = 2827.473 ; gain = 1325.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:48 . Memory (MB): peak = 2827.473 ; gain = 1325.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:55 . Memory (MB): peak = 2839.664 ; gain = 1337.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:55 . Memory (MB): peak = 2839.664 ; gain = 1337.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:55 . Memory (MB): peak = 2839.664 ; gain = 1337.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:55 . Memory (MB): peak = 2839.664 ; gain = 1337.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-------------+-----------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name  | RTL Name                                                                                | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-------------+-----------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|mmp_iddmm_sp | mmp_iddmm_pe_0/mmp_iddmm_mul128xy/mult_inst/simple_p12adder256_3_2/stage2.s2_l_reg[63]  | 5      | 32    | NO           | YES                | YES               | 32     | 0       | 
+|mmp_iddmm_sp | mmp_iddmm_pe_0/mmp_iddmm_mul128xy/mult_inst/simple_p12adder256_3_2/stage2.s2_l_reg[31]  | 6      | 16    | NO           | YES                | YES               | 16     | 0       | 
+|mmp_iddmm_sp | mmp_iddmm_pe_0/mmp_iddmm_mul128xy/mult_inst/simple_p12adder256_3_2/stage2.s2_l_reg[15]  | 6      | 16    | NO           | NO                 | YES               | 16     | 0       | 
+|mmp_iddmm_sp | mmp_iddmm_pe_0/mmp_iddmm_mul128xy/mult_inst/simple_p12adder256_3_2/stage2.b_h_reg[127]  | 5      | 32    | NO           | YES                | YES               | 32     | 0       | 
+|mmp_iddmm_sp | mmp_iddmm_pe_0/mmp_iddmm_mul128xy/mult_inst/simple_p12adder256_3_2/stage2.b_h_reg[95]   | 7      | 16    | NO           | NO                 | YES               | 16     | 0       | 
+|mmp_iddmm_sp | mmp_iddmm_pe_0/mmp_iddmm_mul128xy/mult_inst/sum5_1_reg[191]                             | 5      | 16    | NO           | YES                | YES               | 16     | 0       | 
+|mmp_iddmm_sp | mmp_iddmm_pe_0/mmp_iddmm_mul128xy/mult_inst/sum5_0_reg[127]                             | 4      | 16    | NO           | YES                | YES               | 16     | 0       | 
+|mmp_iddmm_sp | mmp_iddmm_pe_0/mmp_iddmm_mul128xy/mult_inst/sum6_0_reg[79]                              | 4      | 16    | NO           | NO                 | YES               | 16     | 0       | 
+|mmp_iddmm_sp | mmp_iddmm_pe_0/mmp_iddmm_mul128m1s/mult_inst/simple_p12adder256_3_2/stage2.s2_l_reg[63] | 5      | 32    | NO           | YES                | NO                | 32     | 0       | 
+|mmp_iddmm_sp | mmp_iddmm_pe_0/mmp_iddmm_mul128m1s/mult_inst/simple_p12adder256_3_2/stage2.s2_l_reg[31] | 6      | 16    | NO           | YES                | NO                | 16     | 0       | 
+|mmp_iddmm_sp | mmp_iddmm_pe_0/mmp_iddmm_mul128m1s/mult_inst/simple_p12adder256_3_2/stage2.s2_l_reg[15] | 6      | 16    | NO           | NO                 | NO                | 16     | 0       | 
+|mmp_iddmm_sp | mmp_iddmm_pe_0/mmp_iddmm_mul128m1s/mult_inst/sum5_0_reg[127]                            | 4      | 16    | NO           | YES                | YES               | 16     | 0       | 
+|mmp_iddmm_sp | mmp_iddmm_pe_0/mmp_iddmm_mul128m1s/mult_inst/sum6_0_reg[79]                             | 4      | 16    | NO           | NO                 | YES               | 16     | 0       | 
+|mmp_iddmm_sp | mmp_iddmm_pe_0/mmp_iddmm_mul128r/mult_inst/simple_p12adder256_3_2/stage2.s2_l_reg[63]   | 5      | 32    | NO           | YES                | YES               | 32     | 0       | 
+|mmp_iddmm_sp | mmp_iddmm_pe_0/mmp_iddmm_mul128r/mult_inst/simple_p12adder256_3_2/stage2.s2_l_reg[31]   | 6      | 16    | NO           | YES                | YES               | 16     | 0       | 
+|mmp_iddmm_sp | mmp_iddmm_pe_0/mmp_iddmm_mul128r/mult_inst/simple_p12adder256_3_2/stage2.s2_l_reg[15]   | 6      | 16    | NO           | NO                 | YES               | 16     | 0       | 
+|mmp_iddmm_sp | mmp_iddmm_pe_0/mmp_iddmm_mul128r/mult_inst/simple_p12adder256_3_2/stage2.b_h_reg[127]   | 5      | 32    | NO           | YES                | YES               | 32     | 0       | 
+|mmp_iddmm_sp | mmp_iddmm_pe_0/mmp_iddmm_mul128r/mult_inst/simple_p12adder256_3_2/stage2.b_h_reg[95]    | 7      | 16    | NO           | NO                 | YES               | 16     | 0       | 
+|mmp_iddmm_sp | mmp_iddmm_pe_0/mmp_iddmm_mul128r/mult_inst/sum5_1_reg[191]                              | 5      | 16    | NO           | YES                | YES               | 16     | 0       | 
+|mmp_iddmm_sp | mmp_iddmm_pe_0/mmp_iddmm_mul128r/mult_inst/sum5_0_reg[127]                              | 4      | 16    | NO           | YES                | YES               | 16     | 0       | 
+|mmp_iddmm_sp | mmp_iddmm_pe_0/mmp_iddmm_mul128r/mult_inst/sum6_0_reg[79]                               | 4      | 16    | NO           | NO                 | YES               | 16     | 0       | 
++-------------+-----------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping        | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (C'+(A''*B'')')'   | 16     | 16     | 34     | -      | 35     | 2    | 2    | 2    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (PCIN+(A''*B'')')' | 16     | 16     | -      | -      | 34     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | ((A''*B'')')'      | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (PCIN+(A''*B'')')' | 16     | 16     | -      | -      | 34     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 34     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (C'+(A''*B'')')'   | 16     | 16     | 34     | -      | 35     | 2    | 2    | 2    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 34     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 34     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (C'+(A''*B'')')'   | 16     | 16     | 34     | -      | 35     | 2    | 2    | 2    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | ((A''*B'')')'      | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|mult        | ((A*B)')'          | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 34     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A*B)'             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A*B)')'     | 16     | 16     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (PCIN+(A''*B'')')' | 16     | 16     | -      | -      | 34     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (C'+(A''*B'')')'   | 16     | 16     | 34     | -      | 35     | 2    | 2    | 2    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (PCIN+(A''*B'')')' | 16     | 16     | -      | -      | 34     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (PCIN+(A''*B'')')' | 16     | 16     | -      | -      | 34     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (C'+(A''*B'')')'   | 16     | 16     | 34     | -      | 35     | 2    | 2    | 2    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | ((A''*B'')')'      | 16     | 16     | -      | -      | 32     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|mult        | ((A'*B')')'        | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (PCIN+(A''*B'')')' | 16     | 16     | -      | -      | 34     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|mult        | (A'*B')'           | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|mult        | (PCIN+(A'*B')')'   | 16     | 16     | -      | -      | 33     | 1    | 1    | -    | -    | -     | 1    | 1    | 
++------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |BUFG            |     1|
+|2     |CARRY8          |   573|
+|3     |DSP_ALU         |   164|
+|5     |DSP_A_B_DATA    |   164|
+|8     |DSP_C_DATA      |   164|
+|10    |DSP_MULTIPLIER  |   164|
+|11    |DSP_M_DATA      |   164|
+|13    |DSP_OUTPUT      |   164|
+|14    |DSP_PREADD      |   164|
+|15    |DSP_PREADD_DATA |   164|
+|16    |LUT1            |    66|
+|17    |LUT2            |  2893|
+|18    |LUT3            |   558|
+|19    |LUT4            |   532|
+|20    |LUT5            |   141|
+|21    |LUT6            |   200|
+|22    |RAM32M16        |    36|
+|23    |RAM32X1D        |     8|
+|24    |SRL16E          |   416|
+|25    |FDCE            |   428|
+|26    |FDPE            |     4|
+|27    |FDRE            |  6729|
+|28    |IBUF            |   520|
+|29    |OBUF            |   130|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:55 . Memory (MB): peak = 2839.664 ; gain = 1337.586
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:48 . Memory (MB): peak = 2839.664 ; gain = 1214.250
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:55 . Memory (MB): peak = 2839.664 ; gain = 1337.586
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.183 . Memory (MB): peak = 2872.680 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1302 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2911.637 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 729 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 164 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 520 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 36 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 8 instances
+
+Synth Design complete | Checksum: 9be22b8f
+INFO: [Common 17-83] Releasing license: Synthesis
+75 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:01:14 . Memory (MB): peak = 2911.637 ; gain = 2423.109
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+INFO: [Common 17-1381] The checkpoint 'E:/github/school/RSA2048/vivado-mmp/RSA2048/RSA2048.runs/synth_1/mmp_iddmm_sp.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file mmp_iddmm_sp_utilization_synth.rpt -pb mmp_iddmm_sp_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 13 12:39:52 2023...

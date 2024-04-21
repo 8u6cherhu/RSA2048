@@ -1,0 +1,43 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../RTL/sim" \
+"../../../../../RTL/source/r2mm/mm_r2mm_2n.v" \
+"../../../../../RTL/source/iddmm/mmp_iddmm_addend.v" \
+"../../../../../RTL/source/iddmm/common/simple_vedic_32bit.v" \
+"../../../../../RTL/source/iddmm/common/simple_p12adder256_3_2.v" \
+"../../../../../RTL/source/r2mm/mm_r2mm.v" \
+"../../../../../RTL/source/iddmm/mmp_iddmm_sp.v" \
+"../../../../../RTL/source/iddmm/common/mult.v" \
+"../../../../../RTL/source/iddmm/common/simple_vedic_8bit.v" \
+"../../../../../RTL/source/r2mm/me_top.v" \
+"../../../../../RTL/source/iddmm/common/simple_vedic_16bit.v" \
+"../../../../../RTL/source/iddmm/mmp_iddmm_shift.v" \
+"../../../../../RTL/source/iddmm/mmp_iddmm_pe.v" \
+"../../../../../RTL/source/ahb/ahb_rsa2048.v" \
+"../../../../../RTL/source/ahb/fifo_rsa2048_ctrl.v" \
+"../../../../../RTL/source/ahb/ahb_fifo.v" \
+"../../../../../RTL/source/iddmm/mmp_iddmm_mul128.v" \
+"../../../../../RTL/source/iddmm/mmp_iddmm_addfirst.v" \
+"../../../../../RTL/source/iddmm/mmp_iddmm_ctrl.v" \
+
+sv xil_defaultlib  --include "../../../../../RTL/sim" \
+"../../../../../RTL/source/iddmm/me_iddmm_top.sv" \
+
+verilog xil_defaultlib  --include "../../../../../RTL/sim" \
+"../../../../../RTL/source/ahb/ahb2fifo_slave_core.v" \
+"../../../../../RTL/source/iddmm/mm_iddmm_sub.v" \
+"../../../../../RTL/source/iddmm/common/simple_p1adder129.v" \
+"../../../../../RTL/source/iddmm/common/simple_vedic_128bit.v" \
+"../../../../../RTL/source/iddmm/common/simple_vedic_4bit.v" \
+"../../../../../RTL/source/iddmm/common/simple_ram.v" \
+"../../../../../RTL/source/iddmm/common/simple_vedic_64bit.v" \
+"../../../../../RTL/sim/mmp_iddmm_sp_tb.v" \
+"../../../../../RTL/sim/bfm_ahb.v" \
+"../../../../../RTL/sim/ahb_rsa2048_tb.v" \
+"../../../../../RTL/sim/me_top_tb.v" \
+"../../../../../RTL/sim/me_iddmm_top_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

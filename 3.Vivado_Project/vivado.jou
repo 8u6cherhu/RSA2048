@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Sat Apr 20 13:23:21 2024
+# Process ID: 44896
+# Current directory: E:/github/fpga_project/RSA2048/Vivado_Project/RSA2048
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent47156 E:\github\fpga_project\RSA2048\Vivado_Project\RSA2048\RSA2048.xpr
+# Log file: E:/github/fpga_project/RSA2048/Vivado_Project/RSA2048/vivado.log
+# Journal file: E:/github/fpga_project/RSA2048/Vivado_Project/RSA2048\vivado.jou
+# Running On: y7000pr, OS: Windows, CPU Frequency: 3110 MHz, CPU Physical cores: 12, Host memory: 42732 MB
+#-----------------------------------------------------------
+start_gui
+open_project E:/github/fpga_project/RSA2048/Vivado_Project/RSA2048/RSA2048.xpr
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top me_iddmm_top_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+source me_iddmm_top_tb.tcl
+run 10 us
+close_sim

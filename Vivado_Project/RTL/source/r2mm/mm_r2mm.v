@@ -4,17 +4,15 @@
 *   Orirgin     :20200706
 *   Author      :
 */
-module mm_r2mm
-#(
+module mm_r2mm#(
     parameter K = 64
-)
-(
-    input   wire            xi  ,
-    input   wire [K-1  :0]  y   ,
-    input   wire [K-1  :0]  m   ,
+)(
+        input   wire            xi
+    ,   input   wire [K-1  :0]  y
+    ,   input   wire [K-1  :0]  m
 
-    input   wire [K+1-1:0]  si  ,
-    output  wire [K+1-1:0]  so  
+    ,   input   wire [K+1-1:0]  si
+    ,   output  wire [K+1-1:0]  so
 );
 wire [K+2-1:0]a;
 wire [K-1  :0]ximuly;

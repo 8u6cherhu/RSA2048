@@ -24,42 +24,44 @@ module ahb2fifo_slave_core#(
     ,   parameter K = 128
     ,   parameter N = 16
 )(
-   //----------------------------------------------------
-   // AHB slave port
-     input    wire              HRESETn
-   , input    wire              HCLK
-   , input    wire              HSEL
-   , input    wire [31  :0]     HADDR
-   , input    wire [1   :0]     HTRANS
-   , input    wire              HWRITE
-   , input    wire [2   :0]     HSIZE
-   , input    wire [2   :0]     HBURST
-   , input    wire [31  :0]     HWDATA  
-   , output   reg  [31  :0]     HRDATA
-   , output   reg  [1   :0]     HRESP
-   , input    wire              HREADYin
-   , output   reg               HREADYout
-   //----------------------------------------------------
-   // FIFO forward: address related
-   , output  wire               fwr_clk  
-   , input   wire               fwr_rdy  
-   , output  reg                fwr_vld  
-   , output  reg  [31   :0]     fwr_dat  
-   , input   wire               fwr_full
-   , input   wire [FIFO_AW:0]   fwr_cnt // how many rooms available
-   //----------------------------------------------------
-   // FIFO backward: data related
-   , output  wire               brd_clk  
-   , output  reg                brd_rdy  
-   , input   wire               brd_vld  
-   , input   wire [31   :0]     brd_dat  
-   , input   wire               brd_empty
-   , input   wire [FIFO_AW:0]   brd_cnt // how many items available
-   //----------------------------------------------------
-   // FIFO backward: data related
-   , output  wire               rsa_start
-   , input   wire               rsa_finish          
+    //----------------------------------------------------
+    // AHB slave port
+        input    wire              HRESETn
+    ,   input    wire              HCLK
+    ,   input    wire              HSEL
+    ,   input    wire [31  :0]     HADDR
+    ,   input    wire [1   :0]     HTRANS
+    ,   input    wire              HWRITE
+    ,   input    wire [2   :0]     HSIZE
+    ,   input    wire [2   :0]     HBURST
+    ,   input    wire [31  :0]     HWDATA  
+    ,   output   reg  [31  :0]     HRDATA
+    ,   output   reg  [1   :0]     HRESP
+    ,   input    wire              HREADYin
+    ,   output   reg               HREADYout
+    //----------------------------------------------------
+    // FIFO forward: address related
+    ,   output  wire               fwr_clk  
+    ,   input   wire               fwr_rdy  
+    ,   output  reg                fwr_vld  
+    ,   output  reg  [31   :0]     fwr_dat  
+    ,   input   wire               fwr_full
+    ,   input   wire [FIFO_AW:0]   fwr_cnt // how many rooms available
+    //----------------------------------------------------
+    // FIFO backward: data related
+    ,   output  wire               brd_clk  
+    ,   output  reg                brd_rdy  
+    ,   input   wire               brd_vld  
+    ,   input   wire [31   :0]     brd_dat  
+    ,   input   wire               brd_empty
+    ,   input   wire [FIFO_AW:0]   brd_cnt // how many items available
+    //----------------------------------------------------
+    // FIFO backward: data related
+    ,   output  wire               rsa_start
+    ,   input   wire               rsa_finish          
 );
+    //----------------------------------------------------
+    reg [31:0]  REG_STATE [0:1];
     //----------------------------------------------------
     assign fwr_clk   = HCLK;
     assign brd_clk   = HCLK;
@@ -72,21 +74,19 @@ module ahb2fifo_slave_core#(
     reg [ 2:0]  T_SIZE;
     reg [ 4:0]  T_LENG;
     //----------------------------------------------------
-    reg [31:0]  REG_STATE [0:1];
-    //----------------------------------------------------
     reg [3:0] state;
-    localparam      STH_IDLE    = 'h0,
-                    STH_WREG    = 'h1,
-                    STH_RREG    = 'h2,
-                    STH_WAIT    = 'h3,
-                    STH_ADDR    = 'h4,
-                    STH_READ0   = 'h5,
-                    STH_READ1   = 'h6,
-                    STH_READ2   = 'h7,
-                    STH_WRITE0  = 'h8,
-                    STH_WRITE1  = 'h9;
+    localparam  STH_IDLE    = 'h0,
+                STH_WREG    = 'h1,
+                STH_RREG    = 'h2,
+                STH_WAIT    = 'h3,
+                STH_ADDR    = 'h4,
+                STH_READ0   = 'h5,
+                STH_READ1   = 'h6,
+                STH_READ2   = 'h7,
+                STH_WRITE0  = 'h8,
+                STH_WRITE1  = 'h9;
 
-   always @ (posedge HCLK or negedge HRESETn) begin
+    always @ (posedge HCLK or negedge HRESETn) begin
         if(!HRESETn)begin
             REG_STATE[1] <=  0;
         end
@@ -96,56 +96,56 @@ module ahb2fifo_slave_core#(
         else if(rsa_finish)begin
             REG_STATE[1] <=  1;
         end
-   end
+    end
 
 
    always @ (posedge HCLK or negedge HRESETn) begin
-       if (HRESETn==0) begin
-           HRDATA       <=  32'h0;
-           HREADYout    <=  1'b1;
-           HRESP        <=  2'b00; //`HRESP_OKAY;
-           fwr_vld      <=  1'b0;
-           fwr_dat      <=  32'h0;
-           brd_rdy      <=  1'b0;
-           T_ADDR       <=  32'h0;
-           T_WRITE      <=  1'b0;
-           T_TRANS      <=  2'h0;
-           T_BURST      <=  3'h0;
-           T_SIZE       <=  3'h0;
-           state        <=  STH_IDLE;
-           REG_STATE[0] <=  0;
-       end else begin // if (HRESETn==0) begin
+        if (HRESETn==0) begin
+            HRDATA       <=  32'h0;
+            HREADYout    <=  1'b1;
+            HRESP        <=  2'b00; //`HRESP_OKAY;
+            fwr_vld      <=  1'b0;
+            fwr_dat      <=  32'h0;
+            brd_rdy      <=  1'b0;
+            T_ADDR       <=  32'h0;
+            T_WRITE      <=  1'b0;
+            T_TRANS      <=  2'h0;
+            T_BURST      <=  3'h0;
+            T_SIZE       <=  3'h0;
+            state        <=  STH_IDLE;
+            REG_STATE[0] <=  0;
+        end else begin // if (HRESETn==0) begin
            case (state)
             STH_IDLE: begin
                 fwr_vld   <= 1'b0; // see STH_WRITE1 (should be here)
                 if (HSEL && HREADYin) begin
-                   case (HTRANS)
-                   2'b00, 2'b01: begin //`HTRANS_IDLE,`HTRANS_BUSY
-                          HREADYout <= 1'b1;
-                          state     <= STH_IDLE;
+                    case (HTRANS)
+                    2'b00, 2'b01: begin //`HTRANS_IDLE,`HTRANS_BUSY
+                        HREADYout <= 1'b1;
+                        state     <= STH_IDLE;
                     end
-                   2'b10, 2'b11: begin //`HTRANS_NONSEQ,`HTRANS_SEQ
-                          T_ADDR    <= HADDR;
-                          T_WRITE   <= HWRITE;
-                          T_TRANS   <= HTRANS;
-                          T_BURST   <= HBURST;
-                          T_SIZE    <= HSIZE;
-                          if((HADDR == (ADDR_BASE + 32'd0)) & HWRITE)begin
-                            HREADYout   <=  1'b1;
-                            state       <=  STH_WREG;
-                          end
-                          else if((HADDR == (ADDR_BASE + 32'd4)) & (!HWRITE))begin
-                            HREADYout   <=  1'b0;
-                            state       <=  STH_RREG;
-                          end
-                          else if (HADDR == (ADDR_BASE + 32'd16))begin
-                            HREADYout   <=  1'b0;
-                            state       <=  STH_ADDR;
-                          end
-                          else begin
-                            HREADYout   <=  1'b1;
-                            state       <=  STH_IDLE;
-                          end
+                    2'b10, 2'b11: begin //`HTRANS_NONSEQ,`HTRANS_SEQ
+                        T_ADDR    <= HADDR;
+                        T_WRITE   <= HWRITE;
+                        T_TRANS   <= HTRANS;
+                        T_BURST   <= HBURST;
+                        T_SIZE    <= HSIZE;
+                        if((HADDR == (ADDR_BASE + 32'd0)) & HWRITE)begin
+                        HREADYout   <=  1'b1;
+                        state       <=  STH_WREG;
+                        end
+                        else if((HADDR == (ADDR_BASE + 32'd4)) & (!HWRITE))begin
+                        HREADYout   <=  1'b0;
+                        state       <=  STH_RREG;
+                        end
+                        else if (HADDR == (ADDR_BASE + 32'd16))begin
+                        HREADYout   <=  1'b0;
+                        state       <=  STH_ADDR;
+                        end
+                        else begin
+                        HREADYout   <=  1'b1;
+                        state       <=  STH_IDLE;
+                        end
                     end
                    endcase
                 end 
@@ -165,10 +165,10 @@ module ahb2fifo_slave_core#(
             end
             STH_ADDR: begin
                 if (fwr_rdy) begin
-                   if (T_WRITE) begin
-                      state     <= STH_WRITE0;
-                   end 
-                   else begin
+                    if (T_WRITE) begin
+                        state     <= STH_WRITE0;
+                    end 
+                    else begin
                         if(REG_STATE[1])begin
                             HREADYout <= 1'b0;
                             state     <= STH_READ0;
@@ -177,7 +177,7 @@ module ahb2fifo_slave_core#(
                             HREADYout <= 1'b1;
                             state     <= STH_IDLE;
                         end
-                   end
+                    end
                 end
             end // STH_ADDR
             STH_READ0: begin
@@ -209,17 +209,17 @@ module ahb2fifo_slave_core#(
                 if (HSEL && HREADYin) begin
                     case (HTRANS)
                     2'b00, 2'b01: begin //`HTRANS_IDLE,`HTRANS_BUSY
-                            HREADYout <= 1'b1;
-                            state     <= STH_IDLE;
+                        HREADYout <= 1'b1;
+                        state     <= STH_IDLE;
                     end
                     2'b10, 2'b11: begin //`HTRANS_NONSEQ,`HTRANS_SEQ
-                            T_ADDR    <= HADDR;
-                            T_WRITE   <= HWRITE;
-                            T_TRANS   <= HTRANS;
-                            T_BURST   <= HBURST;
-                            T_SIZE    <= HSIZE;
-                            HREADYout <= 1'b0;
-                            state     <= STH_ADDR;
+                        T_ADDR    <= HADDR;
+                        T_WRITE   <= HWRITE;
+                        T_TRANS   <= HTRANS;
+                        T_BURST   <= HBURST;
+                        T_SIZE    <= HSIZE;
+                        HREADYout <= 1'b0;
+                        state     <= STH_ADDR;
                     end
                     endcase
                 end 

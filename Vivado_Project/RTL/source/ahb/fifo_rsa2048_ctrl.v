@@ -2,16 +2,16 @@ module fifo_rsa2048_ctrl#(
     parameter FDW = 32,
     parameter FAW = 8
 )(
-       input   wire           rst // asynchronous reset (active high)
-     , input   wire           clr // synchronous reset (active high)
-     , input   wire           clk
-     , input   wire           rd_start
-     , output  reg            rd_rdy
-     , input   wire           rd_vld
-     , input   wire [FDW-1:0] rd_din
-     , input   wire           wr_rdy
-     , output  reg            wr_vld
-     , output  reg  [FDW-1:0] wr_dout
+        input   wire                rst // asynchronous reset (active high)
+    ,   input   wire                clr // synchronous reset (active high)
+    ,   input   wire                clk
+    ,   input   wire                rd_start
+    ,   output  reg                 rd_rdy
+    ,   input   wire                rd_vld
+    ,   input   wire    [FDW-1:0]   rd_din
+    ,   input   wire                wr_rdy
+    ,   output  reg                 wr_vld
+    ,   output  reg     [FDW-1:0]   wr_dout
 );
 
 localparam iddmm = 1;

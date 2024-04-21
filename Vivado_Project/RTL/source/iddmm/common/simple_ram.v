@@ -26,8 +26,7 @@
 /*
  *   modify:helrori
  */
-module simple_ram
-#(
+module simple_ram#(
 
     parameter width     = 1,
     parameter widthad   = 1,

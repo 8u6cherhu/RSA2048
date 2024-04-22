@@ -68,10 +68,10 @@ begin
     HBURST  <= #1 3'b000; //`HBURST_SINGLE;
     HWRITE  <= #1 1'b1;   //`HWRITE_WRITE;
     case (size)
-    1:  HSIZE <= #1 3'b000; //`HSIZE_BYTE;
-    2:  HSIZE <= #1 3'b001; //`HSIZE_HWORD;
-    4:  HSIZE <= #1 3'b010; //`HSIZE_WORD;
-    default: $display($time,, "ERROR: unsupported transfer size: %d-byte", size);
+        1       :   HSIZE <= #1 3'b000; //`HSIZE_BYTE;
+        2       :   HSIZE <= #1 3'b001; //`HSIZE_HWORD;
+        4       :   HSIZE <= #1 3'b010; //`HSIZE_WORD;
+        default :   $display($time,, "ERROR: unsupported transfer size: %d-byte", size);
     endcase
     @ (posedge HCLK);
     while (HREADY!==1) @ (posedge HCLK);

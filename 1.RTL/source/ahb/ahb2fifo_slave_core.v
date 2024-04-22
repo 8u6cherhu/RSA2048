@@ -131,23 +131,23 @@ module ahb2fifo_slave_core#(
                         T_BURST   <= HBURST;
                         T_SIZE    <= HSIZE;
                         if((HADDR == (ADDR_BASE + 32'd0)) & HWRITE)begin
-                        HREADYout   <=  1'b1;
-                        state       <=  STH_WREG;
+                            HREADYout   <=  1'b1;
+                            state       <=  STH_WREG;
                         end
                         else if((HADDR == (ADDR_BASE + 32'd4)) & (!HWRITE))begin
-                        HREADYout   <=  1'b0;
-                        state       <=  STH_RREG;
+                            HREADYout   <=  1'b0;
+                            state       <=  STH_RREG;
                         end
                         else if (HADDR == (ADDR_BASE + 32'd16))begin
-                        HREADYout   <=  1'b0;
-                        state       <=  STH_ADDR;
+                            HREADYout   <=  1'b0;
+                            state       <=  STH_ADDR;
                         end
                         else begin
-                        HREADYout   <=  1'b1;
-                        state       <=  STH_IDLE;
+                            HREADYout   <=  1'b1;
+                            state       <=  STH_IDLE;
                         end
                     end
-                   endcase
+                    endcase
                 end 
                 else begin// if (HSEL && HREADYin)
                     HREADYout <= 1'b1;

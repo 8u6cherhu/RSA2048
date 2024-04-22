@@ -45,27 +45,27 @@ module ahb_rsa2048_top (
     localparam N            = 16          ;
     localparam ADDR_BASE    = 32'h78000000;
     //--------------------------------------------------------
-    wire                        fwd_wr_rdy;
-    wire                        fwd_wr_vld;
-    wire [31        :   0]      fwd_wr_dat;
-    wire                        fwd_rd_rdy;
-    wire                        fwd_rd_vld;
-    wire [31        :   0]      fwd_rd_dat;
-    wire                        fwd_full;
-    wire                        fwd_empty;
-    wire [FIFO_AW   :   0]      fwd_cnt_rd;
-    wire [FIFO_AW   :   0]      fwd_cnt_wr;
-    wire                        bwd_rd_rdy;
-    wire                        bwd_rd_vld;
-    wire [31        :   0]      bwd_rd_dat;
-    wire                        bwd_wr_rdy;
-    wire                        bwd_wr_vld;
-    wire [31        :   0]      bwd_wr_dat;
-    wire                        bwd_full;
-    wire                        bwd_empty;
-    wire [FIFO_AW   :   0]      bwd_cnt_rd;
-    wire [FIFO_AW   :   0]      bwd_cnt_wr;
-    wire                        rsa_start;
+    wire                        fwd_wr_rdy  ;
+    wire                        fwd_wr_vld  ;
+    wire [31        :   0]      fwd_wr_dat  ;
+    wire                        fwd_rd_rdy  ;
+    wire                        fwd_rd_vld  ;
+    wire [31        :   0]      fwd_rd_dat  ;
+    wire                        fwd_full    ;
+    wire                        fwd_empty   ;
+    wire [FIFO_AW   :   0]      fwd_cnt_rd  ;
+    wire [FIFO_AW   :   0]      fwd_cnt_wr  ;
+    wire                        bwd_rd_rdy  ;
+    wire                        bwd_rd_vld  ;
+    wire [31        :   0]      bwd_rd_dat  ;
+    wire                        bwd_wr_rdy  ;
+    wire                        bwd_wr_vld  ;
+    wire [31        :   0]      bwd_wr_dat  ;
+    wire                        bwd_full    ;
+    wire                        bwd_empty   ;
+    wire [FIFO_AW   :   0]      bwd_cnt_rd  ;
+    wire [FIFO_AW   :   0]      bwd_cnt_wr  ;
+    wire                        rsa_start   ;
 //----------------------------------------------------
 // It handles AHB transaction as a slave.
 // Two registers are used to store the state of the rsa2048 module

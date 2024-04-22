@@ -128,7 +128,6 @@ if (iddmm==1) begin:iddmm1
         ,   .me_result      (me_result      )
         ,   .me_valid       (me_valid       )
     );
-
 end
 else begin:r2mm
     localparam K = 2048;

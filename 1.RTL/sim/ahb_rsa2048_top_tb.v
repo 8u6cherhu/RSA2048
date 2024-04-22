@@ -14,7 +14,7 @@
 `define SIZE_IN_BYTES 1024
 `endif
 
-module ahb_rsa2048_tb;
+module ahb_rsa2048_top_tb;
    //------------------------------------------------
    localparam SIZE_IN_BYTES=`SIZE_IN_BYTES // memory size
             , DELAY        =`MEM_DELAY; // access delay if any for AMBA3/4

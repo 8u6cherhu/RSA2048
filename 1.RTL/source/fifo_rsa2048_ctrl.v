@@ -1,6 +1,6 @@
 module fifo_rsa2048_ctrl#(
-    parameter FDW = 32,
-    parameter FAW = 8
+        parameter FDW = 32
+    ,   parameter FAW = 8
 )(
         input   wire                rst // asynchronous reset (active high)
     ,   input   wire                clr // synchronous reset (active high)
@@ -27,18 +27,16 @@ if (iddmm==1) begin:iddmm1
                 Wait    = 2,
                 Wr_me_s = 3;
 
-    reg     [2      :   0]  current_state;
-    reg     [FAW - 1:   0]  cnt_rd;
-    reg     [FAW - 1:   0]  cnt_n;
-
-    reg     [K-1:0]     me_x                =   0       ;       
-    reg                 me_x_valid          =   0       ; 
-    wire    [K-1:0]     me_result                       ;
-    reg     [K-1:0]     me_result_out[N-1:0]            ;
-    wire                me_valid                        ;
-
-    wire                me_start                        ;
-    assign              me_start            = rd_start  ;
+    reg     [2      :   0]      current_state                           ;
+    reg     [FAW - 1:   0]      cnt_rd                                  ;
+    reg     [FAW - 1:   0]      cnt_n                                   ;
+    reg     [K-1    :   0]      me_x                    =   0           ;       
+    reg                         me_x_valid              =   0           ; 
+    wire    [K-1    :   0]      me_result                               ;
+    reg     [K-1    :   0]      me_result_out[N-1:0]                    ;
+    wire                        me_valid                                ;
+    wire                        me_start                                ;
+    assign                      me_start                =   rd_start    ;
 
     always @(posedge clk or posedge rst)begin
         if(rst)begin
@@ -116,19 +114,19 @@ if (iddmm==1) begin:iddmm1
 
 
     me_iddmm_top #(
-        .K              ( K )
-    ,   .N              ( N )
+            .K              (K              )
+        ,   .N              (N              )
     )u_me_iddmm_top(
-        .clk            (clk        )
-    ,   .rst_n          (!rst       )
+            .clk            (clk            )
+        ,   .rst_n          (!rst           )
 
-    ,   .me_start       (me_start   )
+        ,   .me_start       (me_start       )
 
-    ,   .me_x           (me_x       )
-    ,   .me_x_valid     (me_x_valid )
+        ,   .me_x           (me_x           )
+        ,   .me_x_valid     (me_x_valid     )
 
-    ,   .me_result      (me_result  )
-    ,   .me_valid       (me_valid   )
+        ,   .me_result      (me_result      )
+        ,   .me_valid       (me_valid       )
     );
 
 end
@@ -155,13 +153,13 @@ else begin:r2mm
     me_top #(
         .K ( K ) //K%2==0 AND K<8191
     )u_me_top(
-          .clk         (clk         )
-        , .rst_n       (!rst        )
-        , .me_start    (me_start    )
-        , .me_x        (me_x        )
-        , .me_y        (me_y        )
-        , .me_result   (me_result   )
-        , .me_valid    (me_valid    )
+            .clk            (clk            )
+        ,   .rst_n          (!rst           )
+        ,   .me_start       (me_start       )
+        ,   .me_x           (me_x           )
+        ,   .me_y           (me_y           )
+        ,   .me_result      (me_result      )
+        ,   .me_valid       (me_valid       )
     );
 
     always @(posedge clk or posedge rst)begin
